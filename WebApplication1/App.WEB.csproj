@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="BLL\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\App.BLL\App.BLL.csproj" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.DAL\App.DAL.csproj" />
   </ItemGroup>
 
 </Project>

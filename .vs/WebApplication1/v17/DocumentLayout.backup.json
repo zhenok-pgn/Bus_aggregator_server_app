@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "D:\\study programming\\visual\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\WebApplication1.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\passengerauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\passengerauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|d:\\study programming\\visual\\webapplication1\\app.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|solutionrelative:app.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|d:\\study programming\\visual\\webapplication1\\app.dal\\infrastructure\\rbkdf2passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|solutionrelative:app.dal\\infrastructure\\rbkdf2passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33A3FDE4-D424-40B5-9712-485DD2480D69}|App.BLL\\App.BLL.csproj|d:\\study programming\\visual\\webapplication1\\app.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A3FDE4-D424-40B5-9712-485DD2480D69}|App.BLL\\App.BLL.csproj|solutionrelative:app.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\WebApplication1.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\app.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\app.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|d:\\study programming\\visual\\webapplication1\\app.dal\\ef\\applicationcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|solutionrelative:app.dal\\ef\\applicationcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\carrierauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\carrierauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|d:\\study programming\\visual\\webapplication1\\app.dal\\entities\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|solutionrelative:app.dal\\entities\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|d:\\study programming\\visual\\webapplication1\\app.dal\\entities\\carrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5CDAB4-9B34-4CB7-8448-808A2B185486}|App.DAL\\App.DAL.csproj|solutionrelative:app.dal\\entities\\carrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\driverauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\driverauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\tripscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\tripscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,56 +54,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.WEB.csproj",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\App.WEB.csproj",
-              "RelativeDocumentMoniker": "WebApplication1\\App.WEB.csproj",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\App.WEB.csproj",
-              "RelativeToolTip": "WebApplication1\\App.WEB.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-10T15:44:38.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.BLL\\Class1.cs",
-              "RelativeDocumentMoniker": "App.BLL\\Class1.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.BLL\\Class1.cs",
-              "RelativeToolTip": "App.BLL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:57:46.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Class1.cs",
-              "RelativeDocumentMoniker": "App.DAL\\Class1.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Class1.cs",
-              "RelativeToolTip": "App.DAL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Title": "RBKDF2PasswordHasher.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Infrastructure\\RBKDF2PasswordHasher.cs",
+              "RelativeDocumentMoniker": "App.DAL\\Infrastructure\\RBKDF2PasswordHasher.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Infrastructure\\RBKDF2PasswordHasher.cs",
+              "RelativeToolTip": "App.DAL\\Infrastructure\\RBKDF2PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:57:19.228Z",
+              "WhenOpened": "2024-11-25T19:52:53.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Passenger.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Entities\\Passenger.cs",
+              "RelativeDocumentMoniker": "App.DAL\\Entities\\Passenger.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Entities\\Passenger.cs",
+              "RelativeToolTip": "App.DAL\\Entities\\Passenger.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:39:48.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DriverAuthService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\DriverAuthService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\DriverAuthService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\DriverAuthService.cs",
+              "RelativeToolTip": "WebApplication1\\BLL\\Services\\DriverAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:46:26.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CarrierAuthService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\CarrierAuthService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\CarrierAuthService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\CarrierAuthService.cs",
+              "RelativeToolTip": "WebApplication1\\BLL\\Services\\CarrierAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:45:57.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PassengerAuthService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\PassengerAuthService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\PassengerAuthService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\PassengerAuthService.cs",
+              "RelativeToolTip": "WebApplication1\\BLL\\Services\\PassengerAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:45:09.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:18:04.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TripsController.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\TripsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TripsController.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\TripsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\TripsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T07:17:02.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationContext .cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\EF\\ApplicationContext .cs",
+              "RelativeDocumentMoniker": "App.DAL\\EF\\ApplicationContext .cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\EF\\ApplicationContext .cs",
+              "RelativeToolTip": "App.DAL\\EF\\ApplicationContext .cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwBkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T18:38:52.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Carrier.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Entities\\Carrier.cs",
+              "RelativeDocumentMoniker": "App.DAL\\Entities\\Carrier.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.DAL\\Entities\\Carrier.cs",
+              "RelativeToolTip": "App.DAL\\Entities\\Carrier.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T06:47:38.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CarriersController.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\CarriersController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CarriersController.cs",
               "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\CarriersController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\CarriersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T14:29:47.937Z",
               "EditorCaption": ""
@@ -92,7 +194,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
               "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Program.cs",
               "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T11:49:04.363Z",
               "EditorCaption": ""

@@ -1,0 +1,13 @@
+D:\study programming\visual\WebApplication1\App.DAL\bin\Debug\net8.0\App.DAL.deps.json
+D:\study programming\visual\WebApplication1\App.DAL\bin\Debug\net8.0\App.DAL.dll
+D:\study programming\visual\WebApplication1\App.DAL\bin\Debug\net8.0\App.DAL.pdb
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.csproj.AssemblyReference.cache
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.AssemblyInfoInputs.cache
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.AssemblyInfo.cs
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.csproj.CoreCompileInputs.cache
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.sourcelink.json
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.dll
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\refint\App.DAL.dll
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\App.DAL.pdb
+D:\study programming\visual\WebApplication1\App.DAL\obj\Debug\net8.0\ref\App.DAL.dll

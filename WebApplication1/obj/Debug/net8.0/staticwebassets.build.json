@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "SOwnQaRbYOGhWkmnAJKwdq79srT7hswqSxEp5hi48iY=",
-  "Source": "WebApplication1",
-  "BasePath": "_content/WebApplication1",
+  "Hash": "dCTV1f7m+e7GcdD6shAu5nKdqCl/EQfOGB50+5xHt/k=",
+  "Source": "App.WEB",
+  "BasePath": "_content/App.WEB",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
