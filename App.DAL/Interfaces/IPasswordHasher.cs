@@ -1,8 +1,8 @@
 ﻿namespace App.DAL.Interfaces
 {
-    public interface IPasswordHasher<T>
+    public interface IPasswordHasher
     {
-        static abstract T HashPassword(string password);
-        static abstract bool VerifyPassword(string password, T hash);
+        static abstract string HashPassword(string password);
+        static abstract bool VerifyPassword(string password, string hash);
     }
 }

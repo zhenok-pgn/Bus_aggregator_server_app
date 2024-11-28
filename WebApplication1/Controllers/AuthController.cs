@@ -1,26 +1,22 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using App.BLL.Interfaces;
 using App.BLL.DTO;
 using App.DAL.Entities;
+using App.DAL.Infrastructure;
 
 namespace App.WEB.Controllers
 {
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public IAuthService<PassengerDTO> PassengerAuthService { get; set; }
-        public IAuthService<CarrierDTO> CarrierAuthService { get; set; }
-        public IAuthService<DriverDTO> DriverAuthService { get; set; }
+        public IAuthService<PassengerDTO, RBKDF2PasswordHasher> PassengerAuthService { get; set; }
+        public IAuthService<CarrierDTO, RBKDF2PasswordHasher> CarrierAuthService { get; set; }
+        public IAuthService<DriverDTO, RBKDF2PasswordHasher> DriverAuthService { get; set; }
 
         public AuthController(
-            IAuthService<PassengerDTO> passengerAuthService,
-            IAuthService<CarrierDTO> carrierAuthService,
-            IAuthService<DriverDTO> driverAuthService)
+            IAuthService<PassengerDTO, RBKDF2PasswordHasher> passengerAuthService,
+            IAuthService<CarrierDTO, RBKDF2PasswordHasher> carrierAuthService,
+            IAuthService<DriverDTO, RBKDF2PasswordHasher> driverAuthService)
         {
             PassengerAuthService = passengerAuthService;
             CarrierAuthService = carrierAuthService;
@@ -29,164 +25,122 @@ namespace App.WEB.Controllers
 
         [Route("passenger/[controller]/login")]
         [HttpPost]
-        public async Task<IActionResult> PassengerLogin(string? returnUrl)
+        public async Task<IActionResult> PassengerLogin(PassengerDTO passenger)
         {
-            // получаем из формы email и пароль
-            var form = HttpContext.Request.Form;
-            if (!await PassengerAuthService.IsDataCorrect(form))
+            if (passenger is null)
             {
                 return BadRequest();
             }
 
-            PassengerDTO? passenger = await PassengerAuthService.FindAndCheckUser(form);
-            if (passenger is null) 
-            { 
+            if (!await PassengerAuthService.Login(passenger))
+            {
                 return Unauthorized();
             }
 
-            var claims = new List<Claim> {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, passenger.Phone),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, passenger.Role.Name)
+            var jwtToken = PassengerAuthService.GetJwtSecurityToken(passenger);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = passenger.Phone
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(claimsPrincipal);
-            return Redirect(returnUrl ?? "/");
 
-
-            // если email и/или пароль не установлены, посылаем статусный код ошибки 400
-            if (!form.ContainsKey("email") || !form.ContainsKey("password"))
-                return Results.BadRequest("Email и/или пароль не установлены");
-            string email = form["email"];
-            string password = form["password"];
-
-            // находим пользователя 
-            Person? person = people.FirstOrDefault(p => p.Email == email && p.Password == password);
-            // если пользователь не найден, отправляем статусный код 401
-            if (person is null) return Results.Unauthorized();
-            var claims = new List<Claim>
-    {
-        new Claim(ClaimsIdentity.DefaultNameClaimType, person.Email),
-        new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role.Name)
-    };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await context.SignInAsync(claimsPrincipal);
-            return Results.Redirect(returnUrl ?? "/");
+            return Ok(response);
         }
 
         [Route("carrier/[controller]/login")]
         [HttpPost]
-        public async Task<IActionResult> CarrierLogin(string? returnUrl)
+        public async Task<IActionResult> CarrierLogin(CarrierDTO carrier)
         {
-            // получаем из формы email и пароль
-            var form = HttpContext.Request.Form;
-            if (!await CarrierAuthService.IsDataCorrect(form))
+            if (carrier is null)
             {
                 return BadRequest();
             }
 
-            CarrierDTO? carrier = await CarrierAuthService.FindAndCheckUser(form) as CarrierDTO;
-            if (carrier is null)
+            if (!await CarrierAuthService.Login(carrier))
             {
                 return Unauthorized();
             }
 
-            var claims = new List<Claim> {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, carrier.Phone),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, carrier.Role.Name)
+            var jwtToken = CarrierAuthService.GetJwtSecurityToken(carrier);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = carrier.Inn
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(claimsPrincipal);
-            return Redirect(returnUrl ?? "/");
+
+            return Ok(response);
         }
 
         [Route("driver/[controller]/login")]
         [HttpPost]
-        public async Task<IActionResult> DriverLogin(string? returnUrl)
+        public async Task<IActionResult> DriverLogin(DriverDTO driver)
         {
-            // получаем из формы email и пароль
-            var form = HttpContext.Request.Form;
-            if (!await DriverAuthService.IsDataCorrect(form))
+            if (driver is null)
             {
                 return BadRequest();
             }
 
-            DriverDTO? driver = await DriverAuthService.FindAndCheckUser(form) as DriverDTO;
-            if (passenger is null)
+            if (!await DriverAuthService.Login(driver))
             {
                 return Unauthorized();
             }
 
-            var claims = new List<Claim> {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, driver.Phone),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, driver.Role.Name)
+            var jwtToken = DriverAuthService.GetJwtSecurityToken(driver);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = driver.LicenseId
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(claimsPrincipal);
-            return Redirect(returnUrl ?? "/");
+
+            return Ok(response);
         }
 
         [Route("passenger/[controller]/signin")]
         [HttpPost]
-        public async Task<IActionResult> PassengerSignin(string? returnUrl)
+        public async Task<IActionResult> PassengerSignin(PassengerDTO passenger)
         {
-            // получаем из формы email и пароль
-            var form = HttpContext.Request.Form;
-            if (!await PassengerAuthService.IsDataCorrect(form))
+            if (passenger is null)
             {
                 return BadRequest();
             }
 
-            if (PassengerAuthService.IsUserExist(form))
+            if (!await PassengerAuthService.Signin(passenger))
             {
                 return Unauthorized();
             }
 
-
-            var claims = new List<Claim> {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, passenger.Phone),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, passenger.Role.Name)
+            var jwtToken = PassengerAuthService.GetJwtSecurityToken(passenger);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = passenger.Phone
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(claimsPrincipal);
-            return Redirect(returnUrl ?? "/");
+
+            return Ok(response);
         }
 
         [Route("carrier/[controller]/signin")]
         [HttpPost]
-        public async Task<IActionResult> CarrierSignin(string? returnUrl)
+        public async Task<IActionResult> CarrierSignin(CarrierDTO carrier)
         {
-            // получаем из формы email и пароль
-            var form = HttpContext.Request.Form;
-            if (!await CarrierAuthService.IsDataCorrect(form))
+            if (carrier is null)
             {
                 return BadRequest();
             }
 
-            if (CarrierAuthService.IsUserExist(form))
+            if (!await CarrierAuthService.Signin(carrier))
             {
                 return Unauthorized();
             }
 
-            var claims = new List<Claim> {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, carrier.Phone),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, carrier.Role.Name)
+            var jwtToken = CarrierAuthService.GetJwtSecurityToken(carrier);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = carrier.Inn
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-            await HttpContext.SignInAsync(claimsPrincipal);
-            return Redirect(returnUrl ?? "/");
-        }
 
-        [Route("[controller]/logout")]
-        [HttpGet]
-        public async Task<string> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return "Данные удалены";
+            return Ok(response);
         }
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.DAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,25 +7,16 @@ using System.Threading.Tasks;
 
 namespace App.BLL.Interfaces
 {
-    public interface IAuthService<T>
+    public interface IAuthService<T, H> where H : IPasswordHasher
     {
-        /// <summary>
-        /// Проверка на правильность отправленных данных при авторизации
-        /// </summary>
-        /// <returns>True, if correct</returns>
-        Task<bool> IsDataCorrect(IFormCollection form);
-
-        /// <summary>
-        /// Находит пользователя и проверяет корректность логина и пароля
-        /// </summary>
-        /// <returns></returns>
-        Task<T?> FindAndCheckUser(IFormCollection form);
-
         /// <summary>
         /// Проверяет, существует ли пользователь с логином
         /// </summary>
         /// <param name="formCollection"></pram>
         /// <returns></returns>
         Task<T?> GetUserIfExist(IFormCollection form);
+        Task<bool> Login(T user);
+        Task<bool> Signin(T user);
+        string GetJwtSecurityToken(T user);
     }
 }

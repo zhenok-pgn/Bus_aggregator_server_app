@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using App.BLL.DTO;
+using App.DAL.EF;
 
 namespace App.WEB.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TripsController : ControllerBase
     {
-        public ITodoRepository TodoItems { get; set; }
+        public ApplicationMysqlContext db { get; set; }
 
-        public TripsController(ITodoRepository todoItems)
+        public TripsController(ApplicationMysqlContext db)
         {
-            TodoItems = todoItems;
+            this.db = db;
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> Get(int id)
+        public async Task<ActionResult<TripDTO>> Get(int id)
         {
-            User user = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
+            var user = await db.Trips.FirstOrDefaultAsync(x => x.Id == id);
             if (user == null)
                 return NotFound();
             return new ObjectResult(user);
         }
 
-        [HttpGet("{idFrom}-{idTo}/{date?}/{passengers?}")]
+        /*[HttpGet("{idFrom}-{idTo}/{date?}/{passengers?}")]
         public async Task<ActionResult<User>> Find(int idFrom, int idTo, DateOnly date, int passengers = 1)
         {
             User user = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
@@ -73,6 +76,6 @@ namespace App.WEB.Controllers
             db.Users.Remove(user);
             await db.SaveChangesAsync();
             return Ok(user);
-        }
+        }*/
     }
 }

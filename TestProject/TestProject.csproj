@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\App.DAL\App.DAL.csproj" />
+    <ProjectReference Include="..\WebApplication1\App.WEB.csproj" />
   </ItemGroup>
 
   <ItemGroup>

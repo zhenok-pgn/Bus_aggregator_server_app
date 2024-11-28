@@ -1,35 +1,40 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using App.BLL.DTO;
+using App.DAL.EF;
+using App.DAL.Entities;
+using App.WEB.BLL.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CarriersController : ControllerBase
     {
-        public ITodoRepository TodoItems { get; set; }
+        public ApplicationMysqlContext db { get; set; }
 
-        public CarriersController(ITodoRepository todoItems)
+        public CarriersController(ApplicationMysqlContext db)
         {
-            TodoItems = todoItems;
+            this.db = db;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+        public async Task<ActionResult<IEnumerable<CarrierDTO>>> Get()
         {
-            return await db.Users.ToListAsync();
+            var result = await db.Carriers.ToListAsync();
+            return result.MapToDto<CarrierDTO, Carrier>();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> Get(int id)
+        public async Task<ActionResult<CarrierDTO>> Get(int id)
         {
-            User user = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
-            if (user == null)
+            var result = await db.Carriers.FirstOrDefaultAsync(x => x.Id == id);
+            if (result == null)
                 return NotFound();
-            return new ObjectResult(user);
+            return new ObjectResult(result.MapToDto());
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public async Task<ActionResult<User>> Post(User user)
         {
             if (user == null)
@@ -70,6 +75,6 @@ namespace WebApplication1.Controllers
             db.Users.Remove(user);
             await db.SaveChangesAsync();
             return Ok(user);
-        }
+        }*/
     }
 }

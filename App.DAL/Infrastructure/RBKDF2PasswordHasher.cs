@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace App.DAL.Infrastructure
 {
-    public class RBKDF2PasswordHasher : IPasswordHasher<string>
+    public class RBKDF2PasswordHasher : IPasswordHasher
     {
         public static string HashPassword(string password)
         {

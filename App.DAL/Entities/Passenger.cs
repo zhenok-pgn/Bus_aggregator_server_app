@@ -12,10 +12,10 @@ namespace App.DAL.Entities
     {
         public int Id { get; set; }
         public Guid Guid { get; set; }
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Phone { get; set; }
-        public string? Password { get; set; }
+        public required string FirstName { get; set; }
+        public required string LastName { get; set; }
+        public required string Phone { get; set; }
+        public required string HashedPassword { get; set; }
         public bool IsBan { get; set; }
     }
 
@@ -29,7 +29,7 @@ namespace App.DAL.Entities
                 .IsRequired();
             builder.Property(p => p.Phone)
                 .IsRequired();
-            builder.Property(p => p.Password)
+            builder.Property(p => p.HashedPassword)
                 .IsRequired();
         }
     }

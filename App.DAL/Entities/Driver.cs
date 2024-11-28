@@ -1,17 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
     public class Driver
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
+        public required string LicenseId { get; set; }
+        public required string Name { get; set; }
+        public bool IsBan { get; set; }
+        public required string HashedPassword { get; set; }
     }
 
     public class DriverConfiguration : IEntityTypeConfiguration<Driver>
