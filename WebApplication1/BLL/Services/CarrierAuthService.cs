@@ -1,8 +1,13 @@
 ﻿using App.BLL.DTO;
 using App.BLL.Interfaces;
 using App.DAL.EF;
+using App.DAL.Entities;
 using App.DAL.Infrastructure;
+using App.DAL.Interfaces;
+using App.WEB.BLL.DTO.Requests;
+using App.WEB.BLL.DTO.Responses;
 using App.WEB.BLL.Infrastructure;
+using App.WEB.BLL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,8 +15,16 @@ using System.Security.Claims;
 
 namespace App.WEB.BLL.Services
 {
-    public class CarrierAuthService : IAuthService<CarrierDTO, RBKDF2PasswordHasher>
+    public class CarrierAuthService : IAuthService<Carrier>
     {
+        private readonly ITokenService _tokenService;
+        private readonly IPasswordHasher _passwordHasher;
+        public CarrierAuthService(ITokenService tokenService, IPasswordHasher passwordHasher)
+        {
+            _tokenService = tokenService;
+            _passwordHasher = passwordHasher;
+        }
+
         public string GetJwtSecurityToken(CarrierDTO user)
         {
             var claims = new List<Claim> {
@@ -29,6 +42,21 @@ namespace App.WEB.BLL.Services
             return encodedJwt;
         }
 
+        public Task<AuthResponse> GetLoginResponse(AuthRequest user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<AuthResponse> GetRefreshResponse(RefreshTokenRequest user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<AuthResponse> GetSignupResponse(AuthRequest user)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<CarrierDTO?> GetUserIfExist(IFormCollection form)
         {
             throw new NotImplementedException();
@@ -40,7 +68,7 @@ namespace App.WEB.BLL.Services
             var userInDB = await db.Carriers.FirstOrDefaultAsync(p => p.Inn == user.Inn);
             if (userInDB is null) { return false; }
 
-            return RBKDF2PasswordHasher.VerifyPassword(user.Password, userInDB.HashedPassword);
+            return _passwordHasher.VerifyPassword(user.Password, userInDB.HashedPassword);
         }
 
         public async Task<bool> Signin(CarrierDTO user)
@@ -49,7 +77,7 @@ namespace App.WEB.BLL.Services
             var userInDB = await db.Carriers.FirstOrDefaultAsync(p => p.Inn == user.Inn);
             if (userInDB is not null) { return false; }
 
-            string hashedPassword = RBKDF2PasswordHasher.HashPassword(user.Password);
+            string hashedPassword = _passwordHasher.HashPassword(user.Password);
             await db.Carriers.AddAsync(new()
             {
                 Name = user.Name,

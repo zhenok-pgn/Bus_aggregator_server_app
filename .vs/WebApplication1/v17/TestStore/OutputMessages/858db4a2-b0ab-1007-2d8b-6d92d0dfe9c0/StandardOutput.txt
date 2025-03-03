@@ -1,0 +1,221 @@
+warn: 28.02.2025 00:04:51.712 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+warn: 28.02.2025 00:04:51.782 RelationalEventId.OptionalDependentWithoutIdentifyingPropertyWarning[20606] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The entity type 'Comforts' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+info: 28.02.2025 00:04:52.330 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DROP DATABASE `ef`;
+warn: 28.02.2025 00:04:52.410 RelationalEventId.OptionalDependentWithoutIdentifyingPropertyWarning[20606] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The entity type 'Comforts' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+info: 28.02.2025 00:04:52.450 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE DATABASE `ef`;
+info: 28.02.2025 00:04:52.603 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      ALTER DATABASE CHARACTER SET utf8mb4;
+info: 28.02.2025 00:04:52.648 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Buses` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `StateNumber` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Vin` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Color` longtext CHARACTER SET utf8mb4 NULL,
+          `SeatingPlan` longtext CHARACTER SET utf8mb4 NULL,
+          `Comforts_HasToilet` tinyint(1) NULL,
+          `Comforts_HasClimateControl` tinyint(1) NULL,
+          `Comforts_HasWiFi` tinyint(1) NULL,
+          `Comforts_HasRosette` tinyint(1) NULL,
+          `Comforts_HasFoldingSeats` tinyint(1) NULL,
+          CONSTRAINT `PK_Buses` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.688 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Carriers` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Inn` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Ogrn` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Ogrnip` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Address` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `OfficeHours` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Phones` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `IsBan` tinyint(1) NOT NULL,
+          `HashedPassword` longtext CHARACTER SET utf8mb4 NOT NULL,
+          CONSTRAINT `PK_Carriers` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.734 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Drivers` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `LicenseId` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `IsBan` tinyint(1) NOT NULL,
+          `HashedPassword` longtext CHARACTER SET utf8mb4 NOT NULL,
+          CONSTRAINT `PK_Drivers` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.770 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Localities` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          CONSTRAINT `PK_Localities` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.809 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Passengers` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Guid` char(36) COLLATE ascii_general_ci NOT NULL,
+          `FirstName` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `LastName` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Phone` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `HashedPassword` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `IsBan` tinyint(1) NOT NULL,
+          CONSTRAINT `PK_Passengers` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.843 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Tariffs` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `Currency` int NOT NULL,
+          CONSTRAINT `PK_Tariffs` PRIMARY KEY (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.893 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Routes` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `CarrierId` int NULL,
+          CONSTRAINT `PK_Routes` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_Routes_Carriers_CarrierId` FOREIGN KEY (`CarrierId`) REFERENCES `Carriers` (`Id`)
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:52.946 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Stations` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `Name` longtext CHARACTER SET utf8mb4 NULL,
+          `Type` int NOT NULL,
+          `Address` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `LocalityId` int NOT NULL,
+          `Latitude` float NOT NULL,
+          `Longitude` float NOT NULL,
+          CONSTRAINT `PK_Stations` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_Stations_Localities_LocalityId` FOREIGN KEY (`LocalityId`) REFERENCES `Localities` (`Id`) ON DELETE CASCADE
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:53.009 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `RouteSchedules` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `RouteId` int NOT NULL,
+          `TariffId` int NOT NULL,
+          `StartDate` date NOT NULL,
+          `EndDate` date NOT NULL,
+          `Periodicity` int NOT NULL,
+          `DaysOfWeek` longtext CHARACTER SET utf8mb4 NULL,
+          `StartWith` date NULL,
+          `Interval` int NULL,
+          `DepartureTimes` longtext CHARACTER SET utf8mb4 NOT NULL,
+          `SeatingType` int NOT NULL,
+          `BaseSeatingPlan` longtext CHARACTER SET utf8mb4 NOT NULL,
+          CONSTRAINT `PK_RouteSchedules` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_RouteSchedules_Routes_RouteId` FOREIGN KEY (`RouteId`) REFERENCES `Routes` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_RouteSchedules_Tariffs_TariffId` FOREIGN KEY (`TariffId`) REFERENCES `Tariffs` (`Id`) ON DELETE CASCADE
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:53.154 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (145ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Trips` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `RouteId` int NOT NULL,
+          `BusId` int NOT NULL,
+          `DriverId` int NOT NULL,
+          `DepartureTime` datetime(6) NOT NULL,
+          `FactualSeatingPlan` longtext CHARACTER SET utf8mb4 NOT NULL,
+          CONSTRAINT `PK_Trips` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_Trips_Buses_BusId` FOREIGN KEY (`BusId`) REFERENCES `Buses` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_Trips_Drivers_DriverId` FOREIGN KEY (`DriverId`) REFERENCES `Drivers` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_Trips_Routes_RouteId` FOREIGN KEY (`RouteId`) REFERENCES `Routes` (`Id`) ON DELETE CASCADE
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:53.274 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (120ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `Prices` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `TariffId` int NOT NULL,
+          `DepartureStationId` int NOT NULL,
+          `ArrivalStationId` int NOT NULL,
+          `Value` int NOT NULL,
+          CONSTRAINT `PK_Prices` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_Prices_Stations_ArrivalStationId` FOREIGN KEY (`ArrivalStationId`) REFERENCES `Stations` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_Prices_Stations_DepartureStationId` FOREIGN KEY (`DepartureStationId`) REFERENCES `Stations` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_Prices_Tariffs_TariffId` FOREIGN KEY (`TariffId`) REFERENCES `Tariffs` (`Id`) ON DELETE CASCADE
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:53.346 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `RoutePoints` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `StationId` int NOT NULL,
+          `RouteId` int NOT NULL,
+          `RoutePointId` int NULL,
+          `PreviousRoutePointId` int NULL,
+          `IsBoarding` tinyint(1) NOT NULL,
+          `IsDisembarkation` tinyint(1) NOT NULL,
+          `IsLongTermParking` tinyint(1) NOT NULL,
+          `HoursOnTheRoad` time(6) NULL,
+          `HoursOfTheParking` time(6) NULL,
+          CONSTRAINT `PK_RoutePoints` PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_RoutePoints_RoutePoints_PreviousRoutePointId` FOREIGN KEY (`PreviousRoutePointId`) REFERENCES `RoutePoints` (`Id`),
+          CONSTRAINT `FK_RoutePoints_Routes_RouteId` FOREIGN KEY (`RouteId`) REFERENCES `Routes` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_RoutePoints_Stations_StationId` FOREIGN KEY (`StationId`) REFERENCES `Stations` (`Id`) ON DELETE CASCADE
+      ) CHARACTER SET=utf8mb4;
+info: 28.02.2025 00:04:53.390 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Prices_ArrivalStationId` ON `Prices` (`ArrivalStationId`);
+info: 28.02.2025 00:04:53.423 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Prices_DepartureStationId` ON `Prices` (`DepartureStationId`);
+info: 28.02.2025 00:04:53.455 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Prices_TariffId` ON `Prices` (`TariffId`);
+info: 28.02.2025 00:04:53.496 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_RoutePoints_PreviousRoutePointId` ON `RoutePoints` (`PreviousRoutePointId`);
+info: 28.02.2025 00:04:53.536 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_RoutePoints_RouteId` ON `RoutePoints` (`RouteId`);
+info: 28.02.2025 00:04:53.575 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_RoutePoints_StationId` ON `RoutePoints` (`StationId`);
+info: 28.02.2025 00:04:53.623 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Routes_CarrierId` ON `Routes` (`CarrierId`);
+info: 28.02.2025 00:04:53.659 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_RouteSchedules_RouteId` ON `RouteSchedules` (`RouteId`);
+info: 28.02.2025 00:04:53.696 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_RouteSchedules_TariffId` ON `RouteSchedules` (`TariffId`);
+info: 28.02.2025 00:04:53.743 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Stations_LocalityId` ON `Stations` (`LocalityId`);
+info: 28.02.2025 00:04:53.787 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Trips_BusId` ON `Trips` (`BusId`);
+info: 28.02.2025 00:04:53.821 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Trips_DriverId` ON `Trips` (`DriverId`);
+info: 28.02.2025 00:04:53.858 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_Trips_RouteId` ON `Trips` (`RouteId`);
+info: 28.02.2025 00:04:54.084 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (32ms) [Parameters=[@p0='Tom' (Nullable = false) (Size = 4000), @p1='Alice' (Nullable = false) (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO `Localities` (`Name`)
+      VALUES (@p0);
+      SELECT `Id`
+      FROM `Localities`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+      
+      INSERT INTO `Localities` (`Name`)
+      VALUES (@p1);
+      SELECT `Id`
+      FROM `Localities`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();

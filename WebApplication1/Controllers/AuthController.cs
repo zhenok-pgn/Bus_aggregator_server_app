@@ -3,51 +3,158 @@ using App.BLL.Interfaces;
 using App.BLL.DTO;
 using App.DAL.Entities;
 using App.DAL.Infrastructure;
+using App.WEB.BLL.Interfaces;
+using App.WEB.BLL.DTO.Requests;
+using App.WEB.BLL.Infrastructure;
+using Microsoft.Extensions.Options;
 
 namespace App.WEB.Controllers
 {
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public IAuthService<PassengerDTO, RBKDF2PasswordHasher> PassengerAuthService { get; set; }
-        public IAuthService<CarrierDTO, RBKDF2PasswordHasher> CarrierAuthService { get; set; }
-        public IAuthService<DriverDTO, RBKDF2PasswordHasher> DriverAuthService { get; set; }
+        private readonly IAuthService<Passenger> _passengerAuthService;
+        private readonly IAuthService<Carrier> _carrierAuthService;
+        private readonly IAuthService<Driver> _driverAuthService;
+        private readonly CookieSettings _cookieSettings;
 
         public AuthController(
-            IAuthService<PassengerDTO, RBKDF2PasswordHasher> passengerAuthService,
-            IAuthService<CarrierDTO, RBKDF2PasswordHasher> carrierAuthService,
-            IAuthService<DriverDTO, RBKDF2PasswordHasher> driverAuthService)
+            IAuthService<Passenger> passengerAuthService,
+            IAuthService<Carrier> carrierAuthService,
+            IAuthService<Driver> driverAuthService,
+            IOptions<CookieSettings> cookieSettings)
         {
-            PassengerAuthService = passengerAuthService;
-            CarrierAuthService = carrierAuthService;
-            DriverAuthService = driverAuthService;
+            _passengerAuthService = passengerAuthService;
+            _carrierAuthService = carrierAuthService;
+            _driverAuthService = driverAuthService;
+            _cookieSettings = cookieSettings.Value;
+        }
+
+        private CookieOptions GetCookieOptions()
+        {
+            return new CookieOptions
+            {
+                HttpOnly = _cookieSettings.HttpOnly,
+                Secure = _cookieSettings.Secure,
+                SameSite = Enum.Parse<SameSiteMode>(_cookieSettings.SameSite),
+                Expires = DateTime.UtcNow.AddDays(_cookieSettings.ExpiresInDays)
+            };
         }
 
         [Route("passenger/[controller]/login")]
         [HttpPost]
-        public async Task<IActionResult> PassengerLogin(PassengerDTO passenger)
+        public async Task<IActionResult> PassengerLogin(AuthRequest request)
         {
-            if (passenger is null)
+            if (request is null)
             {
                 return BadRequest();
             }
 
-            if (!await PassengerAuthService.Login(passenger))
+            var response = await _passengerAuthService.GetLoginResponse(request);
+
+            if (response is null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
+                return Ok(response.AccessToken);
+            }
+
+
+
+            /*if (!await _passengerAuthService.Login(passenger))
             {
                 return Unauthorized();
             }
 
-            var jwtToken = PassengerAuthService.GetJwtSecurityToken(passenger);
+            var claims = _passengerAuthService.GetClaims(passenger);
+            var accessToken = _tokenService.GenerateAccessToken(claims);
+            var refreshToken = _tokenService.GenerateRefreshToken();
+
+
             var response = new
             {
                 access_token = jwtToken,
                 username = passenger.Phone
             };
 
-            return Ok(response);
+            return Ok(response);*/
         }
 
-        [Route("carrier/[controller]/login")]
+        [Route("passenger/[controller]/signup")]
+        [HttpPost]
+        public async Task<IActionResult> PassengerSignup(AuthRequest request)
+        {
+            if (request is null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _passengerAuthService.GetSignupResponse(request);
+
+            if (response is null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
+                return Ok(response.AccessToken);
+            }
+
+            /*if (!await _passengerAuthService.Signin(passenger))
+            {
+                return Unauthorized();
+            }
+
+            var jwtToken = _passengerAuthService.GetJwtSecurityToken(passenger);
+            var response = new
+            {
+                access_token = jwtToken,
+                username = passenger.Phone
+            };
+
+            return Ok(response);*/
+        }
+
+        [Route("passenger/[controller]/refresh")]
+        [HttpPost]
+        public async Task<IActionResult> PassengerRefreshToken()
+        {
+            // Получаем Refresh Token из кук
+            var refreshToken = Request.Cookies["refreshToken"];
+
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                return Unauthorized("Refresh Token отсутствует.");
+            }
+
+            // Проверяем Refresh Token
+            var response = await _passengerAuthService.GetRefreshResponse(new() { RefreshToken = refreshToken });
+            if (response is null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
+                return Ok(response.AccessToken);
+            }
+        }
+
+        [HttpPost("passenger/[controller]/logout")]
+        public IActionResult Logout()
+        {
+            // Удаление куки refreshToken
+            Response.Cookies.Delete("refreshToken", GetCookieOptions());
+
+            return Ok(new { Message = "Успешный выход." });
+        }
+
+        // TODO: переделать 
+        /*[Route("carrier/[controller]/login")]
         [HttpPost]
         public async Task<IActionResult> CarrierLogin(CarrierDTO carrier)
         {
@@ -56,12 +163,12 @@ namespace App.WEB.Controllers
                 return BadRequest();
             }
 
-            if (!await CarrierAuthService.Login(carrier))
+            if (!await _carrierAuthService.Login(carrier))
             {
                 return Unauthorized();
             }
 
-            var jwtToken = CarrierAuthService.GetJwtSecurityToken(carrier);
+            var jwtToken = _carrierAuthService.GetJwtSecurityToken(carrier);
             var response = new
             {
                 access_token = jwtToken,
@@ -80,12 +187,12 @@ namespace App.WEB.Controllers
                 return BadRequest();
             }
 
-            if (!await DriverAuthService.Login(driver))
+            if (!await _driverAuthService.Login(driver))
             {
                 return Unauthorized();
             }
 
-            var jwtToken = DriverAuthService.GetJwtSecurityToken(driver);
+            var jwtToken = _driverAuthService.GetJwtSecurityToken(driver);
             var response = new
             {
                 access_token = jwtToken,
@@ -93,33 +200,11 @@ namespace App.WEB.Controllers
             };
 
             return Ok(response);
-        }
+        }*/
 
-        [Route("passenger/[controller]/signin")]
-        [HttpPost]
-        public async Task<IActionResult> PassengerSignin(PassengerDTO passenger)
-        {
-            if (passenger is null)
-            {
-                return BadRequest();
-            }
 
-            if (!await PassengerAuthService.Signin(passenger))
-            {
-                return Unauthorized();
-            }
-
-            var jwtToken = PassengerAuthService.GetJwtSecurityToken(passenger);
-            var response = new
-            {
-                access_token = jwtToken,
-                username = passenger.Phone
-            };
-
-            return Ok(response);
-        }
-
-        [Route("carrier/[controller]/signin")]
+        // TODO: аналогично
+        /*[Route("carrier/[controller]/signin")]
         [HttpPost]
         public async Task<IActionResult> CarrierSignin(CarrierDTO carrier)
         {
@@ -128,12 +213,12 @@ namespace App.WEB.Controllers
                 return BadRequest();
             }
 
-            if (!await CarrierAuthService.Signin(carrier))
+            if (!await _carrierAuthService.Signin(carrier))
             {
                 return Unauthorized();
             }
 
-            var jwtToken = CarrierAuthService.GetJwtSecurityToken(carrier);
+            var jwtToken = _carrierAuthService.GetJwtSecurityToken(carrier);
             var response = new
             {
                 access_token = jwtToken,
@@ -141,6 +226,6 @@ namespace App.WEB.Controllers
             };
 
             return Ok(response);
-        }
+        }*/
     }
 }

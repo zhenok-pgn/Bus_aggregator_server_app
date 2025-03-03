@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
+    // определяет конкретный выезд по маршруту
     public class Trip
     {
         public int Id { get; set; }

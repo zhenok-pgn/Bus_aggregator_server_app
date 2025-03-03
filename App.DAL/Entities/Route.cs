@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
+    //определяет маршрут поездки
     public class Route
     {
         public int Id { get; set; }

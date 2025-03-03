@@ -56,3 +56,4 @@ D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Swa
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.WEB.staticwebassets.runtime.json

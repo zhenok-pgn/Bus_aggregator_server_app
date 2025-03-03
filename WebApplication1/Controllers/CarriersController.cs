@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult<IEnumerable<CarrierDTO>>> Get()
         {
             var result = await db.Carriers.ToListAsync();
-            return result.MapToDto<CarrierDTO, Carrier>();
+            return result.MapToDto<Carrier, CarrierDTO>();
         }
 
         [HttpGet("{id}")]
@@ -31,50 +31,37 @@ namespace WebApplication1.Controllers
             var result = await db.Carriers.FirstOrDefaultAsync(x => x.Id == id);
             if (result == null)
                 return NotFound();
-            return new ObjectResult(result.MapToDto());
-        }
-
-        /*[HttpPost]
-        public async Task<ActionResult<User>> Post(User user)
-        {
-            if (user == null)
-            {
-                return BadRequest();
-            }
-
-            db.Users.Add(user);
-            await db.SaveChangesAsync();
-            return Ok(user);
+            return new ObjectResult(result.MapToDto<CarrierDTO>());
         }
 
         [HttpPut]
-        public async Task<ActionResult<User>> Put(User user)
+        public async Task<ActionResult<CarrierDTO>> Put(CarrierDTO user)
         {
             if (user == null)
             {
                 return BadRequest();
             }
-            if (!db.Users.Any(x => x.Id == user.Id))
+            if (!db.Carriers.Any(x => x.Id == user.Id))
             {
                 return NotFound();
             }
 
             db.Update(user);
             await db.SaveChangesAsync();
-            return Ok(user);
+            return Ok(user.MapToDto<CarrierDTO>());
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<User>> Delete(int id)
+        public async Task<ActionResult<CarrierDTO>> Delete(int id)
         {
-            User user = db.Users.FirstOrDefault(x => x.Id == id);
-            if (user == null)
+            var result = db.Carriers.FirstOrDefault(x => x.Id == id);
+            if (result == null)
             {
                 return NotFound();
             }
-            db.Users.Remove(user);
+            db.Carriers.Remove(result);
             await db.SaveChangesAsync();
-            return Ok(user);
-        }*/
+            return Ok(result.MapToDto<CarrierDTO>());
+        }
     }
 }

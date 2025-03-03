@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using App.BLL.DTO;
 using App.DAL.EF;
+using App.DAL.Entities;
+using App.WEB.BLL.Infrastructure;
 
 namespace App.WEB.Controllers
 {
@@ -23,59 +25,60 @@ namespace App.WEB.Controllers
             var user = await db.Trips.FirstOrDefaultAsync(x => x.Id == id);
             if (user == null)
                 return NotFound();
-            return new ObjectResult(user);
+            return new ObjectResult(user.MapToDto<TripDTO>());
         }
 
-        /*[HttpGet("{idFrom}-{idTo}/{date?}/{passengers?}")]
-        public async Task<ActionResult<User>> Find(int idFrom, int idTo, DateOnly date, int passengers = 1)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<TripDTO>>> Get()
         {
-            User user = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
-            if (user == null)
-                return NotFound();
-            return new ObjectResult(user);
+            var result = await db.Trips.ToListAsync();
+            return result.MapToDto<Trip, TripDTO>();
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> Post(User user)
+        public async Task<ActionResult<TripDTO>> Post(TripDTO user)
         {
             if (user == null)
             {
                 return BadRequest();
             }
 
-            db.Users.Add(user);
+            await db.Trips.AddAsync(new()
+            {
+                Id = user.Id,
+            });
             await db.SaveChangesAsync();
-            return Ok(user);
+            return Ok(user.MapToDto<TripDTO>());
         }
 
         [HttpPut]
-        public async Task<ActionResult<User>> Put(User user)
+        public async Task<ActionResult<TripDTO>> Put(TripDTO user)
         {
             if (user == null)
             {
                 return BadRequest();
             }
-            if (!db.Users.Any(x => x.Id == user.Id))
+            if (!db.Trips.Any(x => x.Id == user.Id))
             {
                 return NotFound();
             }
 
             db.Update(user);
             await db.SaveChangesAsync();
-            return Ok(user);
+            return Ok(user.MapToDto<TripDTO>());
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<User>> Delete(int id)
+        public async Task<ActionResult<TripDTO>> Delete(int id)
         {
-            User user = db.Users.FirstOrDefault(x => x.Id == id);
-            if (user == null)
+            var result = db.Trips.FirstOrDefault(x => x.Id == id);
+            if (result == null)
             {
                 return NotFound();
             }
-            db.Users.Remove(user);
+            db.Trips.Remove(result);
             await db.SaveChangesAsync();
-            return Ok(user);
-        }*/
+            return Ok(result.MapToDto<TripDTO>());
+        }
     }
 }

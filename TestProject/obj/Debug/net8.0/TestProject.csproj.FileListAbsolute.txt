@@ -133,3 +133,4 @@ D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\Swashbu
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.dll
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.pdb
+D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.staticwebassets.runtime.json

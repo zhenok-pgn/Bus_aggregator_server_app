@@ -17,11 +17,11 @@ namespace TestProject
         {
             using (ApplicationMysqlContext db = new ApplicationMysqlContext())
             {
-                //Carrier user1 = new Carrier { Name = "Tom"};
-                //Carrier user2 = new Carrier { Name = "Alice" };
+                Locality user1 = new Locality { Name = "Tom"};
+                Locality user2 = new Locality { Name = "Alice" };
 
-                //db.Carriers.AddRange(user1, user2);
-                //db.SaveChanges();
+                db.Localities.AddRange(user1, user2);
+                db.SaveChanges();
             }
             Assert.Pass();
         }
@@ -33,8 +33,8 @@ namespace TestProject
             Driver driver2 = new Driver() { LicenseId = "132", Name = "Name2", HashedPassword = "1234567892424" };
             var list = new List<Driver> { driver1, driver2 };
 
-            var a = driver1.MapToDto();
-            var b = list.MapToDto<DriverDTO, Driver>();
+            var a = driver1.MapToDto<DriverDTO>();
+            var b = list.MapToDto<Driver, DriverDTO>();
             Assert.Pass();
         }
     }

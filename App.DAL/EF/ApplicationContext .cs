@@ -18,19 +18,23 @@ namespace App.DAL.EF
         public DbSet<Driver> Drivers { get; set; } = null!;
         public DbSet<Locality> Localities { get; set; } = null!;
         public DbSet<Price> Prices { get; set; } = null!;
+        public DbSet<Route> Routes { get; set; } = null!;
         public DbSet<RoutePoint> RoutePoints { get; set; } = null!;
         public DbSet<RouteSchedule> RouteSchedules { get; set; } = null!;
         public DbSet<Station> Stations { get; set; } = null!;
         public DbSet<Tariff> Tariffs { get; set; } = null!;
         public DbSet<Trip> Trips { get; set; } = null!;
         public DbSet<Passenger> Passengers { get; set; } = null!;
+        public DbSet<User> Users { get; set; } = null!;
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         private readonly string connectionString;
 
         public ApplicationMysqlContext(string connectionString = "server=localhost;user=root;password=root;database=ef")
         {
-            Database.EnsureCreated();
             this.connectionString = connectionString;
+            //Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -58,6 +62,8 @@ namespace App.DAL.EF
             modelBuilder.ApplyConfiguration(new DriverConfiguration());
             modelBuilder.ApplyConfiguration(new CarrierConfiguration());
             modelBuilder.ApplyConfiguration(new PassengerConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
         }
     }
 }
