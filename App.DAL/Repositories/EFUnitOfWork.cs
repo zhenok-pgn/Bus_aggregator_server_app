@@ -6,12 +6,12 @@ namespace App.DAL.Repositories
 {
     public class EFUnitOfWork : IUnitOfWork
     {
-        private ApplicationMysqlContext db;
+        private ApplicationDBContext db;
         private CarrierRepository? carrierRepository;
 
         public EFUnitOfWork(string connectionString = "server=localhost;user=root;password=root;database=ef")
         {
-            db = new ApplicationMysqlContext(connectionString);
+            db = new ApplicationDBContext(connectionString);
         }
         public IRepository<Carrier> Carriers
         {

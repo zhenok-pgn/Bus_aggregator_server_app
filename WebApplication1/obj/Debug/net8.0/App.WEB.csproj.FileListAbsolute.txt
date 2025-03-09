@@ -57,3 +57,5 @@ D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Swa
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.WEB.staticwebassets.runtime.json
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Npgsql.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
