@@ -7,9 +7,9 @@ namespace App.DAL.Repositories
 {
     internal class CarrierRepository : IRepository<Carrier>
     {
-        private ApplicationMysqlContext db;
+        private ApplicationDBContext db;
 
-        public CarrierRepository(ApplicationMysqlContext context)
+        public CarrierRepository(ApplicationDBContext context)
         {
             db = context;
         }

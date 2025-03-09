@@ -27,7 +27,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<bool> Login(DriverDTO user)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = await db.Drivers.FirstOrDefaultAsync(p => p.LicenseId == user.LicenseId);
             if (userInDB is null) { return false; }
 
@@ -36,7 +36,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<bool> Signin(DriverDTO user)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = await db.Drivers.FirstOrDefaultAsync(p => p.LicenseId == user.LicenseId);
             if (userInDB is not null) { return false; }
 

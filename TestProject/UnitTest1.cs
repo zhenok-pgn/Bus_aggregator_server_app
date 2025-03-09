@@ -15,7 +15,7 @@ namespace TestProject
         [Test]
         public void Test1()
         {
-            using (ApplicationMysqlContext db = new ApplicationMysqlContext())
+            using (ApplicationDBContext db = new ApplicationDBContext())
             {
                 Locality user1 = new Locality { Name = "Tom"};
                 Locality user2 = new Locality { Name = "Alice" };

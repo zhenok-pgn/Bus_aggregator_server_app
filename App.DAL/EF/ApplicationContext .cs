@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace App.DAL.EF
 {
-    public class ApplicationMysqlContext : DbContext
+    public class ApplicationDBContext : DbContext
     {
         public DbSet<Carrier> Carriers { get; set; } = null!;
         public DbSet<Bus> Buses { get; set; } = null!;
@@ -30,7 +30,7 @@ namespace App.DAL.EF
 
         private readonly string connectionString;
 
-        public ApplicationMysqlContext(string connectionString = "server=localhost;user=root;password=root;database=ef")
+        public ApplicationDBContext(string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=zhenya;Password=")    //"server=localhost;user=root;password=root;database=ef") -- for mysql
         {
             this.connectionString = connectionString;
             //Database.EnsureDeleted();
@@ -39,10 +39,11 @@ namespace App.DAL.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
+            //var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
 
             optionsBuilder
-                .UseMySql(connectionString, serverVersion)
+                //.UseMySql(connectionString, serverVersion)
+                .UseNpgsql(connectionString)
                 // The following three options help with debugging, but should                                                    
                 // be changed or removed for production.
                 .LogTo(Console.WriteLine, LogLevel.Information)

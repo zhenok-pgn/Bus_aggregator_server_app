@@ -11,9 +11,9 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CarriersController : ControllerBase
     {
-        public ApplicationMysqlContext db { get; set; }
+        public ApplicationDBContext db { get; set; }
 
-        public CarriersController(ApplicationMysqlContext db)
+        public CarriersController(ApplicationDBContext db)
         {
             this.db = db;
         }

@@ -37,7 +37,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<AuthResponse> GetLoginResponse(AuthRequest request)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = db.Users.FirstOrDefault(p => p.UserName == request.Username);
 
             // валидация
@@ -69,7 +69,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<AuthResponse> GetSignupResponse(AuthRequest request)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = db.Users.FirstOrDefault(p => p.UserName == request.Username);
 
             if (userInDB is not null) { return null; }
@@ -108,7 +108,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<AuthResponse> GetRefreshResponse(RefreshTokenRequest request)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var token = db.RefreshTokens.Include(r => r.User).FirstOrDefault(p => p.Token == request.RefreshToken);
 
             // валидация

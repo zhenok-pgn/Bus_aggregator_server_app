@@ -11,9 +11,9 @@ namespace App.WEB.Controllers
     [ApiController]
     public class RoutesController : ControllerBase
     {
-        public ApplicationMysqlContext db { get; set; }
+        public ApplicationDBContext db { get; set; }
 
-        public RoutesController(ApplicationMysqlContext db)
+        public RoutesController(ApplicationDBContext db)
         {
             this.db = db;
         }

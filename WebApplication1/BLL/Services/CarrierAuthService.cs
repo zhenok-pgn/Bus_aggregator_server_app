@@ -64,7 +64,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<bool> Login(CarrierDTO user)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = await db.Carriers.FirstOrDefaultAsync(p => p.Inn == user.Inn);
             if (userInDB is null) { return false; }
 
@@ -73,7 +73,7 @@ namespace App.WEB.BLL.Services
 
         public async Task<bool> Signin(CarrierDTO user)
         {
-            using ApplicationMysqlContext db = new ApplicationMysqlContext();
+            using ApplicationDBContext db = new ApplicationDBContext();
             var userInDB = await db.Carriers.FirstOrDefaultAsync(p => p.Inn == user.Inn);
             if (userInDB is not null) { return false; }
 

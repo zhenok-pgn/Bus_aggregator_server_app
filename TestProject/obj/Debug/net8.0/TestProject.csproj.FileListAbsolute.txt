@@ -134,3 +134,5 @@ D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\System.
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.dll
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.pdb
 D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\App.WEB.staticwebassets.runtime.json
+D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\Npgsql.dll
+D:\study programming\visual\WebApplication1\TestProject\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

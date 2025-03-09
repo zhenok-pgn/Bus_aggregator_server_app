@@ -12,9 +12,9 @@ namespace App.WEB.Controllers
     [ApiController]
     public class TripsController : ControllerBase
     {
-        public ApplicationMysqlContext db { get; set; }
+        public ApplicationDBContext db { get; set; }
 
-        public TripsController(ApplicationMysqlContext db)
+        public TripsController(ApplicationDBContext db)
         {
             this.db = db;
         }
