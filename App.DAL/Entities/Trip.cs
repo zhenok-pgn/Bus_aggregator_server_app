@@ -14,11 +14,13 @@ namespace App.DAL.Entities
         public int Id { get; set; }
         public int RouteId { get; set; }
         public Route? Route { get; set; }
+        public int RouteScheduleId { get; set; }
+        public RouteSchedule? RouteSchedule { get; set; }
         public int BusId { get; set; }
         public Bus? Bus { get; set; }
         public int DriverId { get; set; }
         public Driver? Driver { get; set; }
-        public DateTime DepartureTime { get; set; }
+        public DateTimeOffset Departure {  get; set; }
         public string? FactualSeatingPlan { get; set; } // денормализация
     }
 

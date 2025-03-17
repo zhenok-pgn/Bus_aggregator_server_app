@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
@@ -47,7 +42,7 @@ namespace App.DAL.Entities
         public int? Interval { get; set; } // if Periodicity is 'ByNumbers'
         public string? DepartureTimes { get; set; }
         public SeatingType SeatingType { get; set; }
-        public string? BaseSeatingPlan { get; set; }
+        public required string BaseSeatingPlan { get; set; }
     }
 
     public class RouteScheduleConfiguration : IEntityTypeConfiguration<RouteSchedule>

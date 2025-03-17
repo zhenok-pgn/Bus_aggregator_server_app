@@ -9,10 +9,8 @@ namespace App.DAL.Entities
         public Guid Guid { get; set; }
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
-        public required string Phone { get; set; }
-        public required string Email { get; set; }
-        public int UserId { get; set; }
-        public User? User { get; set; }
+        public required string PassportNumber { get; set; }
+        public required string Sex { get; set; }
     }
 
     public class PassengerConfiguration : IEntityTypeConfiguration<Passenger>
@@ -22,10 +20,6 @@ namespace App.DAL.Entities
             builder.Property(p => p.FirstName)
                 .IsRequired();
             builder.Property(p => p.LastName)
-                .IsRequired();
-            builder.Property(p => p.Phone)
-                .IsRequired();
-            builder.Property(p => p.Email)
                 .IsRequired();
         }
     }

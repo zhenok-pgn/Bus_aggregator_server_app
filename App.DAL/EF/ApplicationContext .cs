@@ -17,11 +17,11 @@ namespace App.DAL.EF
         public DbSet<Bus> Buses { get; set; } = null!;
         public DbSet<Driver> Drivers { get; set; } = null!;
         public DbSet<Locality> Localities { get; set; } = null!;
-        public DbSet<Price> Prices { get; set; } = null!;
+        public DbSet<RouteSegmentPrice> Prices { get; set; } = null!;
         public DbSet<Route> Routes { get; set; } = null!;
-        public DbSet<RoutePoint> RoutePoints { get; set; } = null!;
+        public DbSet<RouteStop> RouteStops { get; set; } = null!;
         public DbSet<RouteSchedule> RouteSchedules { get; set; } = null!;
-        public DbSet<Station> Stations { get; set; } = null!;
+        public DbSet<BusStop> BusStops { get; set; } = null!;
         public DbSet<Tariff> Tariffs { get; set; } = null!;
         public DbSet<Trip> Trips { get; set; } = null!;
         public DbSet<Passenger> Passengers { get; set; } = null!;

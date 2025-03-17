@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
@@ -21,7 +16,9 @@ namespace App.DAL.Entities
         public int Id { get; set; }
         public string? Name { get; set; }
         public Currency Currency {  get; set; }
-        public List<Price> Prices { get; set; } = new();
+        public int RouteId { get; set; }
+        public Route? Route { get; set; }
+        public List<RouteSegmentPrice> Prices { get; set; } = new();
     }
 
     public class TariffConfiguration : IEntityTypeConfiguration<Tariff>

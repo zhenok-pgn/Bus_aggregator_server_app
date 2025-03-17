@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace App.DAL.Entities
 {
-    public class Station
+    /// <summary>
+    /// Остановка или станция, находится в населенном пункте (Locality)
+    /// </summary>
+    public class BusStop
     {
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -21,9 +24,9 @@ namespace App.DAL.Entities
         public float Longitude { get; set; }
     }
 
-    public class StationConfiguration : IEntityTypeConfiguration<Station>
+    public class StationConfiguration : IEntityTypeConfiguration<BusStop>
     {
-        public void Configure(EntityTypeBuilder<Station> builder)
+        public void Configure(EntityTypeBuilder<BusStop> builder)
         {
             builder.Property(p => p.Address)
                 .IsRequired();
