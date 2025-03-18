@@ -33,6 +33,8 @@ namespace App.DAL.Entities
         public int CarrierId { get; set; }
         public Carrier? Carrier { get; set; }
         public List<RouteStop> RouteStops { get; set; } = new();
+        public List<RouteSchedule> RouteSchedules { get; set; } = new();
+        public List<Tariff> Tariffs { get; set; } = new();
     }
 
     public class RouteConfiguration : IEntityTypeConfiguration<Route>
@@ -43,6 +45,18 @@ namespace App.DAL.Entities
             //    .HasColumnType("bigint"); // сделать bigint
             builder.Property(p => p.Name)
                 .IsRequired();
+
+            builder.HasMany(r => r.RouteStops)
+                .WithOne(rs => rs.Route)
+                .HasForeignKey(rs => rs.RouteId);
+
+            builder.HasMany(r => r.RouteSchedules)
+                .WithOne(rs => rs.Route)
+                .HasForeignKey(rs => rs.RouteId);
+            
+            builder.HasMany(r => r.Tariffs)
+                .WithOne(rs => rs.Route)
+                .HasForeignKey(rs => rs.RouteId);
         }
     }
 }
