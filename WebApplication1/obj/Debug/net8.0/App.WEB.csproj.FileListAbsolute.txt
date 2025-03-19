@@ -15,10 +15,6 @@ D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Mic
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\MySqlConnector.dll
-D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
-D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.DAL.dll
-D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.DAL.pdb
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.csproj.AssemblyReference.cache
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.GeneratedMSBuildEditorConfig.editorconfig
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.AssemblyInfoInputs.cache
@@ -42,7 +38,6 @@ D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\ref
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.pdb
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.genruntimeconfig.cache
 D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\App.WEB.dll
-D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.MvcApplicationPartsAssemblyInfo.cs
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\libman.json
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -59,3 +54,9 @@ D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Sys
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.WEB.staticwebassets.runtime.json
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Npgsql.dll
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Application.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Core.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Infrastructure.dll
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Application.pdb
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Infrastructure.pdb
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Core.pdb

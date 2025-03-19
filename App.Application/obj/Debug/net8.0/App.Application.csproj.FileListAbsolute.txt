@@ -1,0 +1,16 @@
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.csproj.AssemblyReference.cache
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.AssemblyInfoInputs.cache
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.AssemblyInfo.cs
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.csproj.CoreCompileInputs.cache
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.sourcelink.json
+D:\study programming\visual\WebApplication1\App.Application\bin\Debug\net8.0\App.Application.deps.json
+D:\study programming\visual\WebApplication1\App.Application\bin\Debug\net8.0\App.Application.dll
+D:\study programming\visual\WebApplication1\App.Application\bin\Debug\net8.0\App.Application.pdb
+D:\study programming\visual\WebApplication1\App.Application\bin\Debug\net8.0\App.Core.dll
+D:\study programming\visual\WebApplication1\App.Application\bin\Debug\net8.0\App.Core.pdb
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Appl.090A7001.Up2Date
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.dll
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\refint\App.Application.dll
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\App.Application.pdb
+D:\study programming\visual\WebApplication1\App.Application\obj\Debug\net8.0\ref\App.Application.dll

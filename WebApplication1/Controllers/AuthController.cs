@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using App.BLL.Interfaces;
-using App.BLL.DTO;
-using App.DAL.Entities;
-using App.DAL.Infrastructure;
-using App.WEB.BLL.Interfaces;
-using App.WEB.BLL.DTO.Requests;
-using App.WEB.BLL.Infrastructure;
 using Microsoft.Extensions.Options;
+using App.Application.DTO.Requests;
+using App.Core.Entities;
+using App.Infrastructure.Identity;
+using App.Application.Interfaces.Services;
 
 namespace App.WEB.Controllers
 {

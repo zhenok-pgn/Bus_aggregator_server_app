@@ -1,7 +1,6 @@
-﻿using App.BLL.DTO;
-using App.DAL.EF;
-using App.DAL.Entities;
-using App.WEB.BLL.Infrastructure;
+﻿using App.Application.DTO;
+using App.Application.Mapping;
+using App.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +10,7 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CarriersController : ControllerBase
     {
-        public ApplicationDBContext db { get; set; }
+        /*public ApplicationDBContext db { get; set; }
 
         public CarriersController(ApplicationDBContext db)
         {
@@ -62,6 +61,6 @@ namespace WebApplication1.Controllers
             db.Carriers.Remove(result);
             await db.SaveChangesAsync();
             return Ok(result.MapToDto<CarrierDTO>());
-        }
+        }*/
     }
 }

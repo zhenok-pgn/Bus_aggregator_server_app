@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using App.BLL.DTO;
-using App.DAL.EF;
-using App.DAL.Entities;
-using App.WEB.BLL.Infrastructure;
+using App.Application.Mapping;
+using App.Application.DTO;
 
 namespace App.WEB.Controllers
 {
@@ -12,7 +10,7 @@ namespace App.WEB.Controllers
     [ApiController]
     public class TripsController : ControllerBase
     {
-        public ApplicationDBContext db { get; set; }
+        /*public ApplicationDBContext db { get; set; }
 
         public TripsController(ApplicationDBContext db)
         {
@@ -79,6 +77,6 @@ namespace App.WEB.Controllers
             db.Trips.Remove(result);
             await db.SaveChangesAsync();
             return Ok(result.MapToDto<TripDTO>());
-        }
+        }*/
     }
 }

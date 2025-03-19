@@ -1,7 +1,5 @@
-﻿using App.BLL.DTO;
-using App.DAL.EF;
-using App.DAL.Entities;
-using App.WEB.BLL.Infrastructure;
+﻿using App.Application.DTO;
+using App.Application.Mapping;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +9,7 @@ namespace App.WEB.Controllers
     [ApiController]
     public class RoutesController : ControllerBase
     {
-        public ApplicationDBContext db { get; set; }
+        /*public ApplicationDBContext db { get; set; }
 
         public RoutesController(ApplicationDBContext db)
         {
@@ -78,6 +76,6 @@ namespace App.WEB.Controllers
             db.Routes.Remove(result);
             await db.SaveChangesAsync();
             return Ok(result.MapToDto<RouteDTO>());
-        }
+        }*/
     }
 }

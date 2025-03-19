@@ -1,7 +1,7 @@
-using App.BLL.DTO;
+using App.Application.DTO;
+using App.Application.Mapping;
 using App.DAL.EF;
 using App.DAL.Entities;
-using App.WEB.BLL.Infrastructure;
 
 namespace TestProject
 {

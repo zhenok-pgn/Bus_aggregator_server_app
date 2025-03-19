@@ -1,0 +1,12 @@
+D:\study programming\visual\WebApplication1\App.Core\bin\Debug\net8.0\App.Core.deps.json
+D:\study programming\visual\WebApplication1\App.Core\bin\Debug\net8.0\App.Core.dll
+D:\study programming\visual\WebApplication1\App.Core\bin\Debug\net8.0\App.Core.pdb
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfoInputs.cache
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.AssemblyInfo.cs
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.csproj.CoreCompileInputs.cache
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.sourcelink.json
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.dll
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\refint\App.Core.dll
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\App.Core.pdb
+D:\study programming\visual\WebApplication1\App.Core\obj\Debug\net8.0\ref\App.Core.dll

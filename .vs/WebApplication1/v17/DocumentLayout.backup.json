@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "D:\\study programming\\visual\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\tariffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\tariffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\routescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\routescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\registration\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\registration\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\routestopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\routestopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\services\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\services\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\bll\\dto\\routedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\bll\\dto\\routedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RouteService.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\RouteService.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteService.cs",
-              "RelativeToolTip": "WebApplication1\\BLL\\Services\\RouteService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwBMAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T17:26:32.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RouteDTO.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\DTO\\RouteDTO.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\BLL\\DTO\\RouteDTO.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\DTO\\RouteDTO.cs",
-              "RelativeToolTip": "WebApplication1\\BLL\\DTO\\RouteDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T17:25:49.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TariffService.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\TariffService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\TariffService.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\TariffService.cs",
-              "RelativeToolTip": "WebApplication1\\BLL\\Services\\TariffService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwB4AAAAmAAAAAAAAAA==",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Repositories\\UserRepository.cs*",
+              "RelativeToolTip": "App.Infrastructure\\Repositories\\UserRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T17:25:42.117Z",
+              "WhenOpened": "2025-03-19T17:27:10.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RouteStopService.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteStopService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\RouteStopService.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteStopService.cs",
-              "RelativeToolTip": "WebApplication1\\BLL\\Services\\RouteStopService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "App.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T17:25:28.142Z",
+              "WhenOpened": "2025-03-19T17:22:16.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RouteScheduleService.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteScheduleService.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\BLL\\Services\\RouteScheduleService.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\BLL\\Services\\RouteScheduleService.cs",
-              "RelativeToolTip": "WebApplication1\\BLL\\Services\\RouteScheduleService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwB8AAACeAAAAAAAAAA==",
+              "Title": "InfrastructureServiceRegistration.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Registration\\InfrastructureServiceRegistration.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Registration\\InfrastructureServiceRegistration.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Registration\\InfrastructureServiceRegistration.cs",
+              "RelativeToolTip": "App.Infrastructure\\Registration\\InfrastructureServiceRegistration.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwEQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T17:25:12.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:02:57.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RoutesController.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\RoutesController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\RoutesController.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\RoutesController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\RoutesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T13:02:46.252Z",
+              "WhenOpened": "2025-03-19T17:18:12.652Z",
               "EditorCaption": ""
             }
           ]
