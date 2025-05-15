@@ -1,11 +1,14 @@
 ﻿namespace App.Core.Entities
 {
-    public class Driver
+    public class Driver : User
     {
-        public int Id { get; set; }
-        public required string LicenseId { get; set; }
+        public required string Surname { get; set; }
         public required string Name { get; set; }
-        public bool IsBan { get; set; }
-        public required string HashedPassword { get; set; }
+        public required string Patronymic { get; set; }
+        public required string LicenseNumber { get; set; }
+        public required string EmployeeNumber { get; set; }
+        public DateOnly DayOfBirth { get; set; }
+        public int CarrierId { get; set; }
+        public Carrier? Carrier { get; set; }
     }
 }

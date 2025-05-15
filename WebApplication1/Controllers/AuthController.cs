@@ -1,228 +1,102 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using App.Application.DTO.Requests;
 using App.Core.Entities;
 using App.Infrastructure.Identity;
-using App.Application.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
+using App.Application.DTO.Requests;
+using App.Application.Services;
 
 namespace App.WEB.Controllers
 {
     [ApiController]
+    [Route("auth")]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthService<Passenger> _passengerAuthService;
-        private readonly IAuthService<Carrier> _carrierAuthService;
-        private readonly IAuthService<Driver> _driverAuthService;
+        private readonly IAuthService _authService;
         private readonly CookieSettings _cookieSettings;
 
         public AuthController(
-            IAuthService<Passenger> passengerAuthService,
-            IAuthService<Carrier> carrierAuthService,
-            IAuthService<Driver> driverAuthService,
+            IAuthService authService,
             IOptions<CookieSettings> cookieSettings)
         {
-            _passengerAuthService = passengerAuthService;
-            _carrierAuthService = carrierAuthService;
-            _driverAuthService = driverAuthService;
+            _authService = authService;
             _cookieSettings = cookieSettings.Value;
         }
 
-        private CookieOptions GetCookieOptions()
+        private CookieOptions GetCookieOptions(DateTimeOffset expires)
         {
             return new CookieOptions
             {
                 HttpOnly = _cookieSettings.HttpOnly,
                 Secure = _cookieSettings.Secure,
                 SameSite = Enum.Parse<SameSiteMode>(_cookieSettings.SameSite),
-                Expires = DateTime.UtcNow.AddDays(_cookieSettings.ExpiresInDays)
+                Expires = expires
             };
         }
 
-        [Route("passenger/[controller]/login")]
-        [HttpPost]
-        public async Task<IActionResult> PassengerLogin(AuthRequest request)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginRequest request)
         {
-            if (request is null)
-            {
-                return BadRequest();
-            }
-
-            var response = await _passengerAuthService.GetLoginResponse(request);
-
-            if (response is null)
-            {
-                return Unauthorized();
-            }
-            else
-            {
-                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
-                return Ok(response.AccessToken);
-            }
-
-
-
-            /*if (!await _passengerAuthService.Login(passenger))
-            {
-                return Unauthorized();
-            }
-
-            var claims = _passengerAuthService.GetClaims(passenger);
-            var accessToken = _tokenService.GenerateAccessToken(claims);
-            var refreshToken = _tokenService.GenerateRefreshToken();
-
-
-            var response = new
-            {
-                access_token = jwtToken,
-                username = passenger.Phone
-            };
-
-            return Ok(response);*/
+            var response = await _authService.LoginAsync(request);
+            Response.Cookies.Append("refreshToken", response.RefreshToken, GetCookieOptions(response.RefreshTokenExpiresAt));
+            return Ok(new { response.AccessToken });
         }
 
-        [Route("passenger/[controller]/signup")]
-        [HttpPost]
-        public async Task<IActionResult> PassengerSignup(AuthRequest request)
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh()
         {
-            if (request is null)
-            {
-                return BadRequest();
-            }
+            // Получаем Access Token из заголовка Authorization
+            var accessToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
 
-            var response = await _passengerAuthService.GetSignupResponse(request);
-
-            if (response is null)
-            {
-                return Unauthorized();
-            }
-            else
-            {
-                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
-                return Ok(response.AccessToken);
-            }
-
-            /*if (!await _passengerAuthService.Signin(passenger))
-            {
-                return Unauthorized();
-            }
-
-            var jwtToken = _passengerAuthService.GetJwtSecurityToken(passenger);
-            var response = new
-            {
-                access_token = jwtToken,
-                username = passenger.Phone
-            };
-
-            return Ok(response);*/
-        }
-
-        [Route("passenger/[controller]/refresh")]
-        [HttpPost]
-        public async Task<IActionResult> PassengerRefreshToken()
-        {
             // Получаем Refresh Token из кук
             var refreshToken = Request.Cookies["refreshToken"];
-
-            if (string.IsNullOrEmpty(refreshToken))
-            {
-                return Unauthorized("Refresh Token отсутствует.");
-            }
+            if(refreshToken == null)
+                throw new UnauthorizedAccessException("Refresh token not found in cookies");
 
             // Проверяем Refresh Token
-            var response = await _passengerAuthService.GetRefreshResponse(new() { RefreshToken = refreshToken });
-            if (response is null)
-            {
-                return Unauthorized();
-            }
-            else
-            {
-                Response.Cookies.Append("refreshToken", response.RefreshToken.Token, GetCookieOptions());
-                return Ok(response.AccessToken);
-            }
+            var response = await _authService.RefreshAsync(accessToken, refreshToken);
+            Response.Cookies.Append("refreshToken", response.RefreshToken, GetCookieOptions(response.RefreshTokenExpiresAt));
+            return Ok(new { response.AccessToken });
         }
 
-        [HttpPost("passenger/[controller]/logout")]
+        [HttpPost("logout")]
+        [Authorize]
         public IActionResult Logout()
         {
             // Удаление куки refreshToken
-            Response.Cookies.Delete("refreshToken", GetCookieOptions());
-
-            return Ok(new { Message = "Успешный выход." });
+            Response.Cookies.Delete("refreshToken");
+            return Ok(new { Message = "Successful logout" });
         }
 
-        // TODO: переделать 
-        /*[Route("carrier/[controller]/login")]
-        [HttpPost]
-        public async Task<IActionResult> CarrierLogin(CarrierDTO carrier)
+        [HttpGet("me")]
+        [Authorize]
+        public async Task<IActionResult> GetMe()
         {
-            if (carrier is null)
-            {
-                return BadRequest();
-            }
-
-            if (!await _carrierAuthService.Login(carrier))
-            {
-                return Unauthorized();
-            }
-
-            var jwtToken = _carrierAuthService.GetJwtSecurityToken(carrier);
-            var response = new
-            {
-                access_token = jwtToken,
-                username = carrier.Inn
-            };
-
-            return Ok(response);
+            return Ok(await _authService.GetMe());
         }
 
-        [Route("driver/[controller]/login")]
-        [HttpPost]
-        public async Task<IActionResult> DriverLogin(DriverDTO driver)
+        [HttpPost("passenger/register")]
+        public async Task<IActionResult> PassengerRegister(PassengerRegisterRequest request)
         {
-            if (driver is null)
-            {
-                return BadRequest();
-            }
+            var response = await _authService.RegisterPassengerAsync(request);
+            Response.Cookies.Append("refreshToken", response.RefreshToken, GetCookieOptions(response.RefreshTokenExpiresAt));
+            return Ok(new { response.AccessToken });
+        }
 
-            if (!await _driverAuthService.Login(driver))
-            {
-                return Unauthorized();
-            }
-
-            var jwtToken = _driverAuthService.GetJwtSecurityToken(driver);
-            var response = new
-            {
-                access_token = jwtToken,
-                username = driver.LicenseId
-            };
-
-            return Ok(response);
-        }*/
-
-
-        // TODO: аналогично
-        /*[Route("carrier/[controller]/signin")]
-        [HttpPost]
-        public async Task<IActionResult> CarrierSignin(CarrierDTO carrier)
+        /*[HttpPost("driver/register")]
+        public async Task<IActionResult> DriverRegister(DriverRegisterRequest request)
         {
-            if (carrier is null)
-            {
-                return BadRequest();
-            }
+            var response = await _authService.RegisterDriverAsync(request);
+            Response.Cookies.Append("refreshToken", response.RefreshToken, GetCookieOptions(response.RefreshTokenExpiresAt));
+            return Ok(new { response.AccessToken });
+        }
 
-            if (!await _carrierAuthService.Signin(carrier))
-            {
-                return Unauthorized();
-            }
-
-            var jwtToken = _carrierAuthService.GetJwtSecurityToken(carrier);
-            var response = new
-            {
-                access_token = jwtToken,
-                username = carrier.Inn
-            };
-
-            return Ok(response);
+        [HttpPost("carrier/register")]
+        public async Task<IActionResult> CarrierRegister(CarrierRegisterRequest request)
+        {
+            var response = await _authService.RegisterCarrierAsync(request);
+            Response.Cookies.Append("refreshToken", response.RefreshToken, GetCookieOptions(response.RefreshTokenExpiresAt));
+            return Ok(new { response.AccessToken });
         }*/
     }
 }

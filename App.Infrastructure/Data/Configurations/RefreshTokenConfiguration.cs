@@ -8,8 +8,8 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<RefreshToken> builder)
         {
-            builder.Property(p => p.Token)
-                .IsRequired();
+            builder.HasIndex(x => x.Token)
+            .IsUnique();
         }
     }
 }

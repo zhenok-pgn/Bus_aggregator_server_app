@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "damk2vAGccmY6RWFmKKiA5Osr4oq3zPDf6cW51h0Ezw=",
+  "Hash": "GTPUZxRDz2gp1s9a0xkqv/XkQ9FnYGNi3/MtaVabQsY=",
   "Source": "App.WEB",
   "BasePath": "_content/App.WEB",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-B0g48vYJ.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-B0g48vYJ.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/AboutView-B0g48vYJ#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/AboutView-B0g48vYJ#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35,15 +35,15 @@
       "Integrity": "D/vX+y3lownC09lJHVL6UT8VbR/t1+x3DxeOzg0EfKI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\AboutView-B0g48vYJ.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\AboutView-B0g48vYJ.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-C6Dx7pxG.css",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-C6Dx7pxG.css",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/AboutView-C6Dx7pxG#[.{fingerprint}]?.css",
+      "RelativePath": "passenger/assets/AboutView-C6Dx7pxG#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -56,15 +56,15 @@
       "Integrity": "tC0E5/DcVSB+WzjvJaUQc+Jj208QBO7jQG0AUuV/sac=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\AboutView-C6Dx7pxG.css"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\AboutView-C6Dx7pxG.css"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\FindAddressView-C4ajtf_E.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\FindAddressView-C4ajtf_E.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/FindAddressView-C4ajtf_E#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/FindAddressView-C4ajtf_E#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -77,15 +77,15 @@
       "Integrity": "8KgQHgF49b6JhF+Qo5v1XDDR1Ax15EBrXF0fxZEuxd4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\FindAddressView-C4ajtf_E.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\FindAddressView-C4ajtf_E.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\geocoder-BmMrAMPn.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\geocoder-BmMrAMPn.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/geocoder-BmMrAMPn#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/geocoder-BmMrAMPn#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -98,15 +98,15 @@
       "Integrity": "F83BaxrYlBsixG90KYZl1HevwbTa3JvQzG0wk94KGfE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\geocoder-BmMrAMPn.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\geocoder-BmMrAMPn.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-B-utJTcv.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-B-utJTcv.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/index-B-utJTcv#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/index-B-utJTcv#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -119,15 +119,15 @@
       "Integrity": "PiK7TNH//xQvIpCCzCqbuBGn9g3G72hiyzOgJpY1aro=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index-B-utJTcv.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\index-B-utJTcv.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-D2LsQG94.css",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-D2LsQG94.css",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/index-D2LsQG94#[.{fingerprint}]?.css",
+      "RelativePath": "passenger/assets/index-D2LsQG94#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -140,15 +140,15 @@
       "Integrity": "jZEBXKg2de/XtyCXSEjx+sGiFJ4tE+69EnlvEvMU+oo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index-D2LsQG94.css"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\index-D2LsQG94.css"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-CjAzVhPT.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-CjAzVhPT.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/OSM-CjAzVhPT#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/OSM-CjAzVhPT#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -161,15 +161,15 @@
       "Integrity": "z0ivcJjvi15ulE3iKsD++kKKAowobrD3X/LtCKgiAjc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\OSM-CjAzVhPT.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\OSM-CjAzVhPT.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-ZjQhwIVy.css",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-ZjQhwIVy.css",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/OSM-ZjQhwIVy#[.{fingerprint}]?.css",
+      "RelativePath": "passenger/assets/OSM-ZjQhwIVy#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -182,15 +182,15 @@
       "Integrity": "n/IefEAEMmKhXTafisG6RjLcqSM+nm8ELtP1Y064fpQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\OSM-ZjQhwIVy.css"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\OSM-ZjQhwIVy.css"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\PassangerMainView-C9TZcUiq.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\PassangerMainView-C9TZcUiq.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/PassangerMainView-C9TZcUiq#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/PassangerMainView-C9TZcUiq#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -203,15 +203,15 @@
       "Integrity": "NdbXivcWMkh9MpzZTE3tuJ9PPIbbAw1s+3igcJp5qRk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\PassangerMainView-C9TZcUiq.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\PassangerMainView-C9TZcUiq.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/SearchAddressDropdown-CZ5e5q7Y#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -224,15 +224,15 @@
       "Integrity": "D/9JYj1oARxFKv2pN+UC6qSbIOMLamMxDx+CVje5+ig=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\SearchAddressDropdown-CZ5e5q7Y.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchTripView-t0lsl7gB.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchTripView-t0lsl7gB.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/SearchTripView-t0lsl7gB#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/SearchTripView-t0lsl7gB#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -245,15 +245,15 @@
       "Integrity": "aT3HhZpMPPubQ9NDL+aHVU6/6D9oZDt3H4ISzq/qk4Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\SearchTripView-t0lsl7gB.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\SearchTripView-t0lsl7gB.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-C5Hu-i7D.js",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/TripDetailsView-C5Hu-i7D#[.{fingerprint}]?.js",
+      "RelativePath": "passenger/assets/TripDetailsView-C5Hu-i7D#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -266,15 +266,15 @@
       "Integrity": "QZ/sWEBmqS+GxeWfxodkUDfqudBa+w12/PSK3gm+Y3o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\TripDetailsView-C5Hu-i7D.js"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-CY2ihTCt.css",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-CY2ihTCt.css",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "assets/TripDetailsView-CY2ihTCt#[.{fingerprint}]?.css",
+      "RelativePath": "passenger/assets/TripDetailsView-CY2ihTCt#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -287,15 +287,15 @@
       "Integrity": "xzcCiM3O8SlJr01+/1i4xQtsXX6iYfILOXVquQvdQ8A=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\TripDetailsView-CY2ihTCt.css"
+      "OriginalItemSpec": "wwwroot\\passenger\\assets\\TripDetailsView-CY2ihTCt.css"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\favicon.ico",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "RelativePath": "passenger/favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -308,15 +308,15 @@
       "Integrity": "23SrC3gzjB93j4OYxF9BA8ma6g6EWjEYp3ULTur9NEU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\passenger\\favicon.ico"
     },
     {
-      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\index.html",
+      "Identity": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\index.html",
       "SourceId": "App.WEB",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/App.WEB",
-      "RelativePath": "index#[.{fingerprint}]?.html",
+      "RelativePath": "passenger/index#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -329,13 +329,13 @@
       "Integrity": "w6QvkzBM4+GB7OrOPdoR2THyWWO7RyIg4Wnua9V6Wj4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\index.html"
+      "OriginalItemSpec": "wwwroot\\passenger\\index.html"
     }
   ],
   "Endpoints": [
     {
-      "Route": "assets/AboutView-B0g48vYJ.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-B0g48vYJ.js",
+      "Route": "passenger/assets/AboutView-B0g48vYJ.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-B0g48vYJ.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -371,8 +371,8 @@
       ]
     },
     {
-      "Route": "assets/AboutView-B0g48vYJ.x87pk0ooy5.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-B0g48vYJ.js",
+      "Route": "passenger/assets/AboutView-B0g48vYJ.x87pk0ooy5.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-B0g48vYJ.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -407,7 +407,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/AboutView-B0g48vYJ.js"
+          "Value": "passenger/assets/AboutView-B0g48vYJ.js"
         },
         {
           "Name": "integrity",
@@ -416,8 +416,8 @@
       ]
     },
     {
-      "Route": "assets/AboutView-C6Dx7pxG.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-C6Dx7pxG.css",
+      "Route": "passenger/assets/AboutView-C6Dx7pxG.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-C6Dx7pxG.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -453,8 +453,8 @@
       ]
     },
     {
-      "Route": "assets/AboutView-C6Dx7pxG.k4pye3cstd.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-C6Dx7pxG.css",
+      "Route": "passenger/assets/AboutView-C6Dx7pxG.k4pye3cstd.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-C6Dx7pxG.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -489,7 +489,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/AboutView-C6Dx7pxG.css"
+          "Value": "passenger/assets/AboutView-C6Dx7pxG.css"
         },
         {
           "Name": "integrity",
@@ -498,8 +498,8 @@
       ]
     },
     {
-      "Route": "assets/FindAddressView-C4ajtf_E.0w5hf4mrku.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\FindAddressView-C4ajtf_E.js",
+      "Route": "passenger/assets/FindAddressView-C4ajtf_E.0w5hf4mrku.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\FindAddressView-C4ajtf_E.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -534,7 +534,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/FindAddressView-C4ajtf_E.js"
+          "Value": "passenger/assets/FindAddressView-C4ajtf_E.js"
         },
         {
           "Name": "integrity",
@@ -543,8 +543,8 @@
       ]
     },
     {
-      "Route": "assets/FindAddressView-C4ajtf_E.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\FindAddressView-C4ajtf_E.js",
+      "Route": "passenger/assets/FindAddressView-C4ajtf_E.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\FindAddressView-C4ajtf_E.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -580,8 +580,8 @@
       ]
     },
     {
-      "Route": "assets/geocoder-BmMrAMPn.jp0aju8k7u.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\geocoder-BmMrAMPn.js",
+      "Route": "passenger/assets/geocoder-BmMrAMPn.jp0aju8k7u.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\geocoder-BmMrAMPn.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -616,7 +616,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/geocoder-BmMrAMPn.js"
+          "Value": "passenger/assets/geocoder-BmMrAMPn.js"
         },
         {
           "Name": "integrity",
@@ -625,8 +625,8 @@
       ]
     },
     {
-      "Route": "assets/geocoder-BmMrAMPn.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\geocoder-BmMrAMPn.js",
+      "Route": "passenger/assets/geocoder-BmMrAMPn.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\geocoder-BmMrAMPn.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -662,8 +662,8 @@
       ]
     },
     {
-      "Route": "assets/index-B-utJTcv.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-B-utJTcv.js",
+      "Route": "passenger/assets/index-B-utJTcv.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-B-utJTcv.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -699,8 +699,8 @@
       ]
     },
     {
-      "Route": "assets/index-B-utJTcv.q5va2txa07.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-B-utJTcv.js",
+      "Route": "passenger/assets/index-B-utJTcv.q5va2txa07.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-B-utJTcv.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -735,7 +735,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/index-B-utJTcv.js"
+          "Value": "passenger/assets/index-B-utJTcv.js"
         },
         {
           "Name": "integrity",
@@ -744,8 +744,8 @@
       ]
     },
     {
-      "Route": "assets/index-D2LsQG94.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-D2LsQG94.css",
+      "Route": "passenger/assets/index-D2LsQG94.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-D2LsQG94.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -781,8 +781,8 @@
       ]
     },
     {
-      "Route": "assets/index-D2LsQG94.zkguf0p3xl.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-D2LsQG94.css",
+      "Route": "passenger/assets/index-D2LsQG94.zkguf0p3xl.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-D2LsQG94.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -817,7 +817,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/index-D2LsQG94.css"
+          "Value": "passenger/assets/index-D2LsQG94.css"
         },
         {
           "Name": "integrity",
@@ -826,8 +826,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-CjAzVhPT.7upwu8k3q8.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-CjAzVhPT.js",
+      "Route": "passenger/assets/OSM-CjAzVhPT.7upwu8k3q8.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-CjAzVhPT.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -862,7 +862,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/OSM-CjAzVhPT.js"
+          "Value": "passenger/assets/OSM-CjAzVhPT.js"
         },
         {
           "Name": "integrity",
@@ -871,8 +871,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-CjAzVhPT.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-CjAzVhPT.js",
+      "Route": "passenger/assets/OSM-CjAzVhPT.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-CjAzVhPT.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -908,8 +908,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-ZjQhwIVy.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-ZjQhwIVy.css",
+      "Route": "passenger/assets/OSM-ZjQhwIVy.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-ZjQhwIVy.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -945,8 +945,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-ZjQhwIVy.hcq8itfgbq.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-ZjQhwIVy.css",
+      "Route": "passenger/assets/OSM-ZjQhwIVy.hcq8itfgbq.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-ZjQhwIVy.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -981,7 +981,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/OSM-ZjQhwIVy.css"
+          "Value": "passenger/assets/OSM-ZjQhwIVy.css"
         },
         {
           "Name": "integrity",
@@ -990,8 +990,8 @@
       ]
     },
     {
-      "Route": "assets/PassangerMainView-C9TZcUiq.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\PassangerMainView-C9TZcUiq.js",
+      "Route": "passenger/assets/PassangerMainView-C9TZcUiq.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\PassangerMainView-C9TZcUiq.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1027,8 +1027,8 @@
       ]
     },
     {
-      "Route": "assets/PassangerMainView-C9TZcUiq.tei8vaewyk.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\PassangerMainView-C9TZcUiq.js",
+      "Route": "passenger/assets/PassangerMainView-C9TZcUiq.tei8vaewyk.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\PassangerMainView-C9TZcUiq.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1063,7 +1063,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/PassangerMainView-C9TZcUiq.js"
+          "Value": "passenger/assets/PassangerMainView-C9TZcUiq.js"
         },
         {
           "Name": "integrity",
@@ -1072,8 +1072,8 @@
       ]
     },
     {
-      "Route": "assets/SearchAddressDropdown-CZ5e5q7Y.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
+      "Route": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1109,8 +1109,8 @@
       ]
     },
     {
-      "Route": "assets/SearchAddressDropdown-CZ5e5q7Y.zvtbzw5f3u.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
+      "Route": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.zvtbzw5f3u.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1145,7 +1145,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/SearchAddressDropdown-CZ5e5q7Y.js"
+          "Value": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js"
         },
         {
           "Name": "integrity",
@@ -1154,8 +1154,8 @@
       ]
     },
     {
-      "Route": "assets/SearchTripView-t0lsl7gB.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchTripView-t0lsl7gB.js",
+      "Route": "passenger/assets/SearchTripView-t0lsl7gB.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchTripView-t0lsl7gB.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1191,8 +1191,8 @@
       ]
     },
     {
-      "Route": "assets/SearchTripView-t0lsl7gB.va5braj1av.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchTripView-t0lsl7gB.js",
+      "Route": "passenger/assets/SearchTripView-t0lsl7gB.va5braj1av.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchTripView-t0lsl7gB.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1227,7 +1227,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/SearchTripView-t0lsl7gB.js"
+          "Value": "passenger/assets/SearchTripView-t0lsl7gB.js"
         },
         {
           "Name": "integrity",
@@ -1236,8 +1236,8 @@
       ]
     },
     {
-      "Route": "assets/TripDetailsView-C5Hu-i7D.bdeclumf47.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-C5Hu-i7D.js",
+      "Route": "passenger/assets/TripDetailsView-C5Hu-i7D.bdeclumf47.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1272,7 +1272,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/TripDetailsView-C5Hu-i7D.js"
+          "Value": "passenger/assets/TripDetailsView-C5Hu-i7D.js"
         },
         {
           "Name": "integrity",
@@ -1281,8 +1281,8 @@
       ]
     },
     {
-      "Route": "assets/TripDetailsView-C5Hu-i7D.js",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-C5Hu-i7D.js",
+      "Route": "passenger/assets/TripDetailsView-C5Hu-i7D.js",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1318,8 +1318,8 @@
       ]
     },
     {
-      "Route": "assets/TripDetailsView-CY2ihTCt.3xqa9y2434.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-CY2ihTCt.css",
+      "Route": "passenger/assets/TripDetailsView-CY2ihTCt.3xqa9y2434.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-CY2ihTCt.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1354,7 +1354,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/TripDetailsView-CY2ihTCt.css"
+          "Value": "passenger/assets/TripDetailsView-CY2ihTCt.css"
         },
         {
           "Name": "integrity",
@@ -1363,8 +1363,8 @@
       ]
     },
     {
-      "Route": "assets/TripDetailsView-CY2ihTCt.css",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-CY2ihTCt.css",
+      "Route": "passenger/assets/TripDetailsView-CY2ihTCt.css",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-CY2ihTCt.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1400,8 +1400,8 @@
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
+      "Route": "passenger/favicon.ico",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1437,8 +1437,8 @@
       ]
     },
     {
-      "Route": "favicon.r8e75ffup4.ico",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
+      "Route": "passenger/favicon.r8e75ffup4.ico",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1473,7 +1473,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "passenger/favicon.ico"
         },
         {
           "Name": "integrity",
@@ -1482,8 +1482,8 @@
       ]
     },
     {
-      "Route": "index.html",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\index.html",
+      "Route": "passenger/index.html",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1519,8 +1519,8 @@
       ]
     },
     {
-      "Route": "index.x720wgb1ek.html",
-      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\index.html",
+      "Route": "passenger/index.x720wgb1ek.html",
+      "AssetFile": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1555,7 +1555,7 @@
         },
         {
           "Name": "label",
-          "Value": "index.html"
+          "Value": "passenger/index.html"
         },
         {
           "Name": "integrity",

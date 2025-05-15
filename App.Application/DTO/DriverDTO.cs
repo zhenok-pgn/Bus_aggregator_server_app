@@ -1,6 +1,4 @@
-﻿using App.Core.Entities;
-
-namespace App.Application.DTO
+﻿namespace App.Application.DTO
 {
     public class DriverDTO
     {
@@ -8,6 +6,5 @@ namespace App.Application.DTO
         public required string LicenseId { get; set; }
         public required string Name { get; set; }
         public required string Password { get; set; }
-        public required Role Role { get; set; }
     }
 }

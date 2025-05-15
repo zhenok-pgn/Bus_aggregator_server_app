@@ -8,8 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Tariff> builder)
         {
-            builder.Property(p => p.Name)
-                .IsRequired();
+            builder.HasAlternateKey(t => t.Name);
         }
     }
 }

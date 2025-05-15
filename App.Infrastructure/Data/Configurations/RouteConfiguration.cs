@@ -10,20 +10,11 @@ namespace App.Infrastructure.Data.Configurations
         {
             //builder.Property(p => p.Id)
             //    .HasColumnType("bigint"); // сделать bigint
-            builder.Property(p => p.Name)
-                .IsRequired();
+            builder.HasIndex(r => r.RegistrationNumber)
+            .IsUnique();
+            builder.HasIndex(r => new { r.Number, r.CarrierId })
+            .IsUnique();
 
-            builder.HasMany(r => r.RouteStops)
-                .WithOne(rs => rs.Route)
-                .HasForeignKey(rs => rs.RouteId);
-
-            builder.HasMany(r => r.RouteSchedules)
-                .WithOne(rs => rs.Route)
-                .HasForeignKey(rs => rs.RouteId);
-
-            builder.HasMany(r => r.Tariffs)
-                .WithOne(rs => rs.Route)
-                .HasForeignKey(rs => rs.RouteId);
         }
     }
 }

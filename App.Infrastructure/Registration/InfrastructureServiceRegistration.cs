@@ -1,12 +1,9 @@
-﻿using App.Application.Interfaces;
-using App.Application.Interfaces.Repositories;
-using App.Application.Interfaces.Services;
-using App.Core.Entities;
+﻿using App.Application.Services;
 using App.Core.Interfaces;
 using App.Infrastructure.Data;
 using App.Infrastructure.Identity;
-using App.Infrastructure.Repositories;
 using App.Infrastructure.Security;
+using App.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using System.Reflection;
 using System.Text;
 
 namespace App.Infrastructure.Registration
@@ -22,11 +20,11 @@ namespace App.Infrastructure.Registration
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=zhenya;Password=";
+            //var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=zhenya;Password=";
 
             // Регистрируем DbContext в DI контейнере
             services.AddDbContext<ApplicationDBContext>(options =>
-                options.UseNpgsql(connectionString)
+                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
                     .LogTo(Console.WriteLine, LogLevel.Information)
                     .EnableSensitiveDataLogging()
                     .EnableDetailedErrors());
@@ -60,20 +58,20 @@ namespace App.Infrastructure.Registration
 
             services.Configure<CookieSettings>(configuration.GetSection("CookieSettings"));
 
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
-            services.AddScoped<IRouteRepository, RouteRepository>();
-            services.AddScoped<IRouteScheduleRepository, RouteScheduleRepository>();
-            services.AddScoped<IRouteStopRepository, RouteStopRepository>();
-            services.AddScoped<ITariffRepository, TariffRepository>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-
             services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<IPasswordHasher, RBKDF2PasswordHasher>();
+            services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
 
-            services.AddScoped<IAuthService<Passenger>, PassengerAuthService>();
-            services.AddScoped<IAuthService<Carrier>, CarrierAuthService>();
-            services.AddScoped<IAuthService<Driver>, DriverAuthService>();
+            services.AddScoped<IAuthService, AuthService>();
+
+            services.AddScoped<IRouteScheduleService, RouteScheduleService>();
+            services.AddScoped<IRouteService, RouteService>();
+            services.AddScoped<ITariffService, TariffService>();
+            services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ITripService, TripService>();
+
+            // Auto Mapper Configurations
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;
         }

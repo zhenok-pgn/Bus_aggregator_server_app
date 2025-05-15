@@ -6,20 +6,11 @@
     public class BusStop
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public StationType Type { get; set; }
-        public string? Address { get; set; }
+        public required string Name { get; set; }
+        public required string Address { get; set; }
         public int LocalityId { get; set; }
         public Locality? Locality { get; set; }
-        public float Latitude { get; set; }
-        public float Longitude { get; set; }
-    }
-
-    public enum StationType
-    {
-        Station,
-        Terminal,
-        Stop,
-        Other
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

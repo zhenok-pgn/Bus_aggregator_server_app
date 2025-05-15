@@ -1,13 +1,10 @@
 ﻿namespace App.Core.Entities
 {
-    public class Buyer
+    public class Buyer : User
     {
-        public int Id { get; set; }
-        public required string FirstName { get; set; }
-        public required string LastName { get; set; }
-        public required string Phone { get; set; }
-        public required string Email { get; set; }
-        public int? UserId { get; set; }
-        public User? User { get; set; }
+        public required string Surname { get; set; }
+        public required string Name { get; set; }
+        public string? Patronymic { get; set; }
+        public string? Phone { get; set; }
     }
 }

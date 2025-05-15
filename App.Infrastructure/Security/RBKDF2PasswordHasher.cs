@@ -6,7 +6,7 @@ namespace App.Infrastructure.Security
 {
     public class RBKDF2PasswordHasher : IPasswordHasher
     {
-        public string HashPassword(string password)
+        public string Hash(string password)
         {
             // Генерация соли
             byte[] salt = new byte[16];
@@ -27,7 +27,7 @@ namespace App.Infrastructure.Security
             }
         }
 
-        public bool VerifyPassword(string password, string storedHash)
+        public bool Verify(string password, string storedHash)
         {
             // Разделение хэша и соли
             var parts = storedHash.Split(':');

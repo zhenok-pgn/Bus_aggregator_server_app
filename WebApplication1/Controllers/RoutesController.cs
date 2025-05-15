@@ -1,81 +1,73 @@
 ﻿using App.Application.DTO;
-using App.Application.Mapping;
+using App.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace App.WEB.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("routes")]
     public class RoutesController : ControllerBase
     {
-        /*public ApplicationDBContext db { get; set; }
+        private IRouteService _routeService { get; set; }
+        private ITokenService _tokenService { get; set; }
 
-        public RoutesController(ApplicationDBContext db)
+        public RoutesController(IRouteService routeService, ITokenService tokenService)
         {
-            this.db = db;
+            _routeService = routeService;
+            _tokenService = tokenService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RouteDTO>>> Get()
+        [Authorize(Roles = "Carrier")]
+        public async Task<IActionResult> GetRoutes()
         {
-            var result = await db.Routes.ToListAsync();
-            return result.MapToDto<DAL.Entities.Route, RouteDTO>();
+            var carrierId = _tokenService.GetUserIdFromContext();
+            var routes = await _routeService.GetRoutesAsync(carrierId);
+            return Ok(routes);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<RouteDTO>> Get(int id)
+        [Authorize(Roles = "Carrier")]
+        public async Task<IActionResult> GetRoute(int id)
         {
-            var result = await db.Routes.FirstOrDefaultAsync(x => x.Id == id);
-            if (result == null)
-                return NotFound();
-            return new ObjectResult(result.MapToDto<RouteDTO>());
+            var carrierId = _tokenService.GetUserIdFromContext();
+            var route = await _routeService.GetRouteAsync(carrierId, id);
+            return Ok(route);
         }
 
         [HttpPost]
-        public async Task<ActionResult<RouteDTO>> Post(RouteDTO user)
+        [Authorize(Roles = "Carrier")] // Только перевозчики могут добавлять
+        public async Task<IActionResult> Create([FromBody] RouteDTO dto)
         {
-            if (user == null)
-            {
-                return BadRequest();
-            }
+            var carrierId = _tokenService.GetUserIdFromContext();
+            if(carrierId != dto.Carrier.Id)
+                throw new UnauthorizedAccessException("You do not have permission to create a route for this carrier.");
 
-            await db.Routes.AddAsync(new()
-            {
-                Id = user.Id,
-            });
-            await db.SaveChangesAsync();
-            return Ok(user.MapToDto<RouteDTO>());
+            await _routeService.CreateAsync(dto);
+            return Ok(new { Message = "Successful create" });
         }
 
-        [HttpPut]
-        public async Task<ActionResult<RouteDTO>> Put(RouteDTO user)
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Carrier")]
+        public async Task<IActionResult> Update([FromBody] RouteDTO dto)
         {
-            if (user == null)
-            {
-                return BadRequest();
-            }
-            if (!db.Routes.Any(x => x.Id == user.Id))
-            {
-                return NotFound();
-            }
+            var carrierId = _tokenService.GetUserIdFromContext();
+            if (carrierId != dto.Carrier.Id)
+                throw new UnauthorizedAccessException("You do not have permission to update a route for this carrier.");
 
-            db.Update(user);
-            await db.SaveChangesAsync();
-            return Ok(user.MapToDto<RouteDTO>());
+            await _routeService.UpdateAsync(dto);
+            return Ok(new { Message = "Successful update" });
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<RouteDTO>> Delete(int id)
+        [Authorize(Roles = "Carrier")]
+        public async Task<IActionResult> Delete(int id)
         {
-            var result = db.Routes.FirstOrDefault(x => x.Id == id);
-            if (result == null)
-            {
-                return NotFound();
-            }
-            db.Routes.Remove(result);
-            await db.SaveChangesAsync();
-            return Ok(result.MapToDto<RouteDTO>());
-        }*/
+            var carrierId = _tokenService.GetUserIdFromContext();
+
+            await _routeService.DeleteAsync(carrierId, id);
+            return Ok(new { Message = "Successful delete" });
+        }
     }
 }

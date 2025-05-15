@@ -2,8 +2,8 @@
   "Version": 1,
   "Endpoints": [
     {
-      "Route": "assets/AboutView-B0g48vYJ.js",
-      "AssetFile": "assets/AboutView-B0g48vYJ.js",
+      "Route": "passenger/assets/AboutView-B0g48vYJ.js",
+      "AssetFile": "passenger/assets/AboutView-B0g48vYJ.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -39,8 +39,8 @@
       ]
     },
     {
-      "Route": "assets/AboutView-B0g48vYJ.x87pk0ooy5.js",
-      "AssetFile": "assets/AboutView-B0g48vYJ.js",
+      "Route": "passenger/assets/AboutView-B0g48vYJ.x87pk0ooy5.js",
+      "AssetFile": "passenger/assets/AboutView-B0g48vYJ.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -79,13 +79,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/AboutView-B0g48vYJ.js"
+          "Value": "passenger/assets/AboutView-B0g48vYJ.js"
         }
       ]
     },
     {
-      "Route": "assets/AboutView-C6Dx7pxG.css",
-      "AssetFile": "assets/AboutView-C6Dx7pxG.css",
+      "Route": "passenger/assets/AboutView-C6Dx7pxG.css",
+      "AssetFile": "passenger/assets/AboutView-C6Dx7pxG.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -121,8 +121,8 @@
       ]
     },
     {
-      "Route": "assets/AboutView-C6Dx7pxG.k4pye3cstd.css",
-      "AssetFile": "assets/AboutView-C6Dx7pxG.css",
+      "Route": "passenger/assets/AboutView-C6Dx7pxG.k4pye3cstd.css",
+      "AssetFile": "passenger/assets/AboutView-C6Dx7pxG.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -161,13 +161,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/AboutView-C6Dx7pxG.css"
+          "Value": "passenger/assets/AboutView-C6Dx7pxG.css"
         }
       ]
     },
     {
-      "Route": "assets/FindAddressView-C4ajtf_E.0w5hf4mrku.js",
-      "AssetFile": "assets/FindAddressView-C4ajtf_E.js",
+      "Route": "passenger/assets/FindAddressView-C4ajtf_E.0w5hf4mrku.js",
+      "AssetFile": "passenger/assets/FindAddressView-C4ajtf_E.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -206,13 +206,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/FindAddressView-C4ajtf_E.js"
+          "Value": "passenger/assets/FindAddressView-C4ajtf_E.js"
         }
       ]
     },
     {
-      "Route": "assets/FindAddressView-C4ajtf_E.js",
-      "AssetFile": "assets/FindAddressView-C4ajtf_E.js",
+      "Route": "passenger/assets/FindAddressView-C4ajtf_E.js",
+      "AssetFile": "passenger/assets/FindAddressView-C4ajtf_E.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -248,8 +248,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-CjAzVhPT.7upwu8k3q8.js",
-      "AssetFile": "assets/OSM-CjAzVhPT.js",
+      "Route": "passenger/assets/OSM-CjAzVhPT.7upwu8k3q8.js",
+      "AssetFile": "passenger/assets/OSM-CjAzVhPT.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -288,13 +288,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/OSM-CjAzVhPT.js"
+          "Value": "passenger/assets/OSM-CjAzVhPT.js"
         }
       ]
     },
     {
-      "Route": "assets/OSM-CjAzVhPT.js",
-      "AssetFile": "assets/OSM-CjAzVhPT.js",
+      "Route": "passenger/assets/OSM-CjAzVhPT.js",
+      "AssetFile": "passenger/assets/OSM-CjAzVhPT.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -330,8 +330,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-ZjQhwIVy.css",
-      "AssetFile": "assets/OSM-ZjQhwIVy.css",
+      "Route": "passenger/assets/OSM-ZjQhwIVy.css",
+      "AssetFile": "passenger/assets/OSM-ZjQhwIVy.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -367,8 +367,8 @@
       ]
     },
     {
-      "Route": "assets/OSM-ZjQhwIVy.hcq8itfgbq.css",
-      "AssetFile": "assets/OSM-ZjQhwIVy.css",
+      "Route": "passenger/assets/OSM-ZjQhwIVy.hcq8itfgbq.css",
+      "AssetFile": "passenger/assets/OSM-ZjQhwIVy.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -407,13 +407,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/OSM-ZjQhwIVy.css"
+          "Value": "passenger/assets/OSM-ZjQhwIVy.css"
         }
       ]
     },
     {
-      "Route": "assets/PassangerMainView-C9TZcUiq.js",
-      "AssetFile": "assets/PassangerMainView-C9TZcUiq.js",
+      "Route": "passenger/assets/PassangerMainView-C9TZcUiq.js",
+      "AssetFile": "passenger/assets/PassangerMainView-C9TZcUiq.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -449,8 +449,8 @@
       ]
     },
     {
-      "Route": "assets/PassangerMainView-C9TZcUiq.tei8vaewyk.js",
-      "AssetFile": "assets/PassangerMainView-C9TZcUiq.js",
+      "Route": "passenger/assets/PassangerMainView-C9TZcUiq.tei8vaewyk.js",
+      "AssetFile": "passenger/assets/PassangerMainView-C9TZcUiq.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -489,13 +489,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/PassangerMainView-C9TZcUiq.js"
+          "Value": "passenger/assets/PassangerMainView-C9TZcUiq.js"
         }
       ]
     },
     {
-      "Route": "assets/SearchAddressDropdown-CZ5e5q7Y.js",
-      "AssetFile": "assets/SearchAddressDropdown-CZ5e5q7Y.js",
+      "Route": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js",
+      "AssetFile": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -531,8 +531,8 @@
       ]
     },
     {
-      "Route": "assets/SearchAddressDropdown-CZ5e5q7Y.zvtbzw5f3u.js",
-      "AssetFile": "assets/SearchAddressDropdown-CZ5e5q7Y.js",
+      "Route": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.zvtbzw5f3u.js",
+      "AssetFile": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -571,13 +571,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/SearchAddressDropdown-CZ5e5q7Y.js"
+          "Value": "passenger/assets/SearchAddressDropdown-CZ5e5q7Y.js"
         }
       ]
     },
     {
-      "Route": "assets/SearchTripView-t0lsl7gB.js",
-      "AssetFile": "assets/SearchTripView-t0lsl7gB.js",
+      "Route": "passenger/assets/SearchTripView-t0lsl7gB.js",
+      "AssetFile": "passenger/assets/SearchTripView-t0lsl7gB.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -613,8 +613,8 @@
       ]
     },
     {
-      "Route": "assets/SearchTripView-t0lsl7gB.va5braj1av.js",
-      "AssetFile": "assets/SearchTripView-t0lsl7gB.js",
+      "Route": "passenger/assets/SearchTripView-t0lsl7gB.va5braj1av.js",
+      "AssetFile": "passenger/assets/SearchTripView-t0lsl7gB.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -653,13 +653,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/SearchTripView-t0lsl7gB.js"
+          "Value": "passenger/assets/SearchTripView-t0lsl7gB.js"
         }
       ]
     },
     {
-      "Route": "assets/TripDetailsView-C5Hu-i7D.bdeclumf47.js",
-      "AssetFile": "assets/TripDetailsView-C5Hu-i7D.js",
+      "Route": "passenger/assets/TripDetailsView-C5Hu-i7D.bdeclumf47.js",
+      "AssetFile": "passenger/assets/TripDetailsView-C5Hu-i7D.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -698,13 +698,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/TripDetailsView-C5Hu-i7D.js"
+          "Value": "passenger/assets/TripDetailsView-C5Hu-i7D.js"
         }
       ]
     },
     {
-      "Route": "assets/TripDetailsView-C5Hu-i7D.js",
-      "AssetFile": "assets/TripDetailsView-C5Hu-i7D.js",
+      "Route": "passenger/assets/TripDetailsView-C5Hu-i7D.js",
+      "AssetFile": "passenger/assets/TripDetailsView-C5Hu-i7D.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -740,8 +740,8 @@
       ]
     },
     {
-      "Route": "assets/TripDetailsView-CY2ihTCt.3xqa9y2434.css",
-      "AssetFile": "assets/TripDetailsView-CY2ihTCt.css",
+      "Route": "passenger/assets/TripDetailsView-CY2ihTCt.3xqa9y2434.css",
+      "AssetFile": "passenger/assets/TripDetailsView-CY2ihTCt.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -780,13 +780,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/TripDetailsView-CY2ihTCt.css"
+          "Value": "passenger/assets/TripDetailsView-CY2ihTCt.css"
         }
       ]
     },
     {
-      "Route": "assets/TripDetailsView-CY2ihTCt.css",
-      "AssetFile": "assets/TripDetailsView-CY2ihTCt.css",
+      "Route": "passenger/assets/TripDetailsView-CY2ihTCt.css",
+      "AssetFile": "passenger/assets/TripDetailsView-CY2ihTCt.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -822,8 +822,8 @@
       ]
     },
     {
-      "Route": "assets/geocoder-BmMrAMPn.jp0aju8k7u.js",
-      "AssetFile": "assets/geocoder-BmMrAMPn.js",
+      "Route": "passenger/assets/geocoder-BmMrAMPn.jp0aju8k7u.js",
+      "AssetFile": "passenger/assets/geocoder-BmMrAMPn.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -862,13 +862,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/geocoder-BmMrAMPn.js"
+          "Value": "passenger/assets/geocoder-BmMrAMPn.js"
         }
       ]
     },
     {
-      "Route": "assets/geocoder-BmMrAMPn.js",
-      "AssetFile": "assets/geocoder-BmMrAMPn.js",
+      "Route": "passenger/assets/geocoder-BmMrAMPn.js",
+      "AssetFile": "passenger/assets/geocoder-BmMrAMPn.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -904,8 +904,8 @@
       ]
     },
     {
-      "Route": "assets/index-B-utJTcv.js",
-      "AssetFile": "assets/index-B-utJTcv.js",
+      "Route": "passenger/assets/index-B-utJTcv.js",
+      "AssetFile": "passenger/assets/index-B-utJTcv.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -941,8 +941,8 @@
       ]
     },
     {
-      "Route": "assets/index-B-utJTcv.q5va2txa07.js",
-      "AssetFile": "assets/index-B-utJTcv.js",
+      "Route": "passenger/assets/index-B-utJTcv.q5va2txa07.js",
+      "AssetFile": "passenger/assets/index-B-utJTcv.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -981,13 +981,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/index-B-utJTcv.js"
+          "Value": "passenger/assets/index-B-utJTcv.js"
         }
       ]
     },
     {
-      "Route": "assets/index-D2LsQG94.css",
-      "AssetFile": "assets/index-D2LsQG94.css",
+      "Route": "passenger/assets/index-D2LsQG94.css",
+      "AssetFile": "passenger/assets/index-D2LsQG94.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1023,8 +1023,8 @@
       ]
     },
     {
-      "Route": "assets/index-D2LsQG94.zkguf0p3xl.css",
-      "AssetFile": "assets/index-D2LsQG94.css",
+      "Route": "passenger/assets/index-D2LsQG94.zkguf0p3xl.css",
+      "AssetFile": "passenger/assets/index-D2LsQG94.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1063,13 +1063,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/index-D2LsQG94.css"
+          "Value": "passenger/assets/index-D2LsQG94.css"
         }
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "favicon.ico",
+      "Route": "passenger/favicon.ico",
+      "AssetFile": "passenger/favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1105,8 +1105,8 @@
       ]
     },
     {
-      "Route": "favicon.r8e75ffup4.ico",
-      "AssetFile": "favicon.ico",
+      "Route": "passenger/favicon.r8e75ffup4.ico",
+      "AssetFile": "passenger/favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1145,13 +1145,13 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "passenger/favicon.ico"
         }
       ]
     },
     {
-      "Route": "index.html",
-      "AssetFile": "index.html",
+      "Route": "passenger/index.html",
+      "AssetFile": "passenger/index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1187,8 +1187,8 @@
       ]
     },
     {
-      "Route": "index.x720wgb1ek.html",
-      "AssetFile": "index.html",
+      "Route": "passenger/index.x720wgb1ek.html",
+      "AssetFile": "passenger/index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1227,7 +1227,7 @@
         },
         {
           "Name": "label",
-          "Value": "index.html"
+          "Value": "passenger/index.html"
         }
       ]
     }

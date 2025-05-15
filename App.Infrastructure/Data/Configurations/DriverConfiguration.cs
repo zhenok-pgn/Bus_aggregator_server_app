@@ -8,8 +8,9 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Driver> builder)
         {
-            builder.Property(p => p.Name)
-                .IsRequired();
+            //builder.HasKey(e => e.Id).HasName("pk_driver");
+            builder.HasIndex(d => d.LicenseNumber).IsUnique();
+            builder.HasIndex(d => new { d.EmployeeNumber, d.CarrierId }).IsUnique();
         }
     }
 }

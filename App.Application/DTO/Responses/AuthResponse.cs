@@ -2,8 +2,8 @@
 {
     public class AuthResponse
     {
-        public AccessToken AccessToken { get; set; }
-        public RefreshToken RefreshToken { get; set; }
-        public DateTimeOffset AccessTokenExpires { get; set; }
+        public required string AccessToken { get; set; }
+        public required string RefreshToken { get; set; }
+        public DateTimeOffset RefreshTokenExpiresAt { get; set; }
     }
 }

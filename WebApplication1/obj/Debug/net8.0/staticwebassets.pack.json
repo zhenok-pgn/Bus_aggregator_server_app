@@ -1,64 +1,64 @@
 {
   "Files": [
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-B0g48vYJ.js",
-      "PackagePath": "staticwebassets\\assets\\AboutView-B0g48vYJ.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-B0g48vYJ.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\AboutView-B0g48vYJ.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\AboutView-C6Dx7pxG.css",
-      "PackagePath": "staticwebassets\\assets\\AboutView-C6Dx7pxG.css"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\AboutView-C6Dx7pxG.css",
+      "PackagePath": "staticwebassets\\passenger\\assets\\AboutView-C6Dx7pxG.css"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\FindAddressView-C4ajtf_E.js",
-      "PackagePath": "staticwebassets\\assets\\FindAddressView-C4ajtf_E.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\FindAddressView-C4ajtf_E.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\FindAddressView-C4ajtf_E.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-CjAzVhPT.js",
-      "PackagePath": "staticwebassets\\assets\\OSM-CjAzVhPT.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-CjAzVhPT.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\OSM-CjAzVhPT.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\OSM-ZjQhwIVy.css",
-      "PackagePath": "staticwebassets\\assets\\OSM-ZjQhwIVy.css"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\OSM-ZjQhwIVy.css",
+      "PackagePath": "staticwebassets\\passenger\\assets\\OSM-ZjQhwIVy.css"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\PassangerMainView-C9TZcUiq.js",
-      "PackagePath": "staticwebassets\\assets\\PassangerMainView-C9TZcUiq.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\PassangerMainView-C9TZcUiq.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\PassangerMainView-C9TZcUiq.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
-      "PackagePath": "staticwebassets\\assets\\SearchAddressDropdown-CZ5e5q7Y.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\SearchAddressDropdown-CZ5e5q7Y.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\SearchTripView-t0lsl7gB.js",
-      "PackagePath": "staticwebassets\\assets\\SearchTripView-t0lsl7gB.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\SearchTripView-t0lsl7gB.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\SearchTripView-t0lsl7gB.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-C5Hu-i7D.js",
-      "PackagePath": "staticwebassets\\assets\\TripDetailsView-C5Hu-i7D.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\TripDetailsView-C5Hu-i7D.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\TripDetailsView-CY2ihTCt.css",
-      "PackagePath": "staticwebassets\\assets\\TripDetailsView-CY2ihTCt.css"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\TripDetailsView-CY2ihTCt.css",
+      "PackagePath": "staticwebassets\\passenger\\assets\\TripDetailsView-CY2ihTCt.css"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\geocoder-BmMrAMPn.js",
-      "PackagePath": "staticwebassets\\assets\\geocoder-BmMrAMPn.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\geocoder-BmMrAMPn.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\geocoder-BmMrAMPn.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-B-utJTcv.js",
-      "PackagePath": "staticwebassets\\assets\\index-B-utJTcv.js"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-B-utJTcv.js",
+      "PackagePath": "staticwebassets\\passenger\\assets\\index-B-utJTcv.js"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\assets\\index-D2LsQG94.css",
-      "PackagePath": "staticwebassets\\assets\\index-D2LsQG94.css"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\assets\\index-D2LsQG94.css",
+      "PackagePath": "staticwebassets\\passenger\\assets\\index-D2LsQG94.css"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\favicon.ico",
+      "PackagePath": "staticwebassets\\passenger\\favicon.ico"
     },
     {
-      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\wwwroot\\passenger\\index.html",
+      "PackagePath": "staticwebassets\\passenger\\index.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.App.WEB.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

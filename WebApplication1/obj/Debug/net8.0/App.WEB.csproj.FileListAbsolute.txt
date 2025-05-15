@@ -60,3 +60,6 @@ D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Application.pdb
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Infrastructure.pdb
 D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\App.Core.pdb
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.dll
+D:\study programming\visual\WebApplication1\WebApplication1\obj\Debug\net8.0\App.WEB.MvcApplicationPartsAssemblyInfo.cs
+D:\study programming\visual\WebApplication1\WebApplication1\bin\Debug\net8.0\BCrypt.Net-Next.dll

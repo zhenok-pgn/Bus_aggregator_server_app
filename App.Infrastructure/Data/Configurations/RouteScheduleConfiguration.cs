@@ -8,10 +8,8 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<RouteSchedule> builder)
         {
-            builder.Property(p => p.DepartureTimes)
-                .IsRequired();
-            builder.Property(p => p.BaseSeatingPlan)
-                .IsRequired();
+            builder.HasIndex(rs => new { rs.RouteId, rs.SchedulePatternId, rs.DepartureTime, rs.TariffId })
+            .IsUnique();
         }
     }
 }

@@ -8,12 +8,9 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Bus> builder)
         {
-            builder.Property(p => p.Name)
-                .IsRequired();
-            builder.Property(p => p.StateNumber)
-                .IsRequired();
-            builder.Property(p => p.Vin)
-                .IsRequired();
+            builder.HasAlternateKey(b => new { b.Vin });
+            builder.ToTable(t =>
+                t.HasCheckConstraint("CK_Bus_Vin_Length", @"length(""Vin"") = 17"));
         }
     }
 }

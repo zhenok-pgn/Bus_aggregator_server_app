@@ -8,10 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Passenger> builder)
         {
-            builder.Property(p => p.FirstName)
-                .IsRequired();
-            builder.Property(p => p.LastName)
-                .IsRequired();
+            builder.HasAlternateKey(p => new { p.DocumentType, p.DocumentNumber });
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using App.Core.Entities;
 using App.Infrastructure.Data.Configurations;
 
@@ -8,19 +7,28 @@ namespace App.Infrastructure.Data
     public class ApplicationDBContext : DbContext
     {
         public DbSet<Carrier> Carriers { get; set; } = null!;
-        public DbSet<Bus> Buses { get; set; } = null!;
         public DbSet<Driver> Drivers { get; set; } = null!;
+        public DbSet<Buyer> Buyers { get; set; } = null!;
+        public DbSet<Bus> Buses { get; set; } = null!;
+        public DbSet<BusLocation> BusLocations { get; set; } = null!;
         public DbSet<Locality> Localities { get; set; } = null!;
-        public DbSet<RouteSegmentPrice> Prices { get; set; } = null!;
+        public DbSet<RouteSegment> RouteSegments { get; set; } = null!;
         public DbSet<Route> Routes { get; set; } = null!;
-        public DbSet<RouteStop> RouteStops { get; set; } = null!;
         public DbSet<RouteSchedule> RouteSchedules { get; set; } = null!;
+        public DbSet<RouteSegmentSchedule> RouteSegmentSchedules { get; set; } = null!;
         public DbSet<BusStop> BusStops { get; set; } = null!;
         public DbSet<Tariff> Tariffs { get; set; } = null!;
         public DbSet<Trip> Trips { get; set; } = null!;
         public DbSet<Passenger> Passengers { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<TripExecution> TripExecutions { get; set; } = null!;
+        public DbSet<Booking> Bookings { get; set; } = null!;
+        public DbSet<Seat> Seats { get; set; } = null!;
+        public DbSet<Ticket> Tickets { get; set; } = null!;
+        public DbSet<UtcTimezone> UtcTimezones { get; set; } = null!;
+        public DbSet<SchedulePattern> SchedulePatterns { get; set; } = null!;
+        public DbSet<BookingStatusHistory> BookingStatusHistories { get; set; } = null!;
 
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
@@ -77,6 +85,55 @@ namespace App.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new PassengerConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
+            modelBuilder.ApplyConfiguration(new RouteSegmentConfiguration());
+            modelBuilder.ApplyConfiguration(new RouteSegmentScheduleConfiguration());
+            modelBuilder.ApplyConfiguration(new TripExecutionConfiguration());
+            modelBuilder.ApplyConfiguration(new UtcTimezoneConfiguration());
+            modelBuilder.ApplyConfiguration(new TicketConfiguration());
+            modelBuilder.ApplyConfiguration(new SeatConfiguration());
+            modelBuilder.ApplyConfiguration(new SchedulePatternConfiguration());
+            modelBuilder.ApplyConfiguration(new BusLocationConfiguration());
+            modelBuilder.ApplyConfiguration(new BookingConfiguration());
+            modelBuilder.ApplyConfiguration(new BookingStatusHistoryConfiguration());
+
+            //ApplySnakeCaseNames(modelBuilder);
+        }
+
+        private static void ApplySnakeCaseNames(ModelBuilder modelBuilder)
+        {
+            foreach (var entity in modelBuilder.Model.GetEntityTypes())
+            {
+                entity.SetTableName(ToSnakeCase(entity.GetTableName()!));
+
+                foreach (var property in entity.GetProperties())
+                {
+                    property.SetColumnName(ToSnakeCase(property.GetColumnName()!));
+                }
+
+                foreach (var key in entity.GetKeys())
+                {
+                    key.SetName(ToSnakeCase(key.GetName()!));
+                }
+
+                foreach (var fk in entity.GetForeignKeys())
+                {
+                    fk.SetConstraintName(ToSnakeCase(fk.GetConstraintName()!));
+                }
+
+                foreach (var index in entity.GetIndexes())
+                {
+                    index.SetDatabaseName(ToSnakeCase(index.GetDatabaseName()!));
+                }
+            }
+        }
+
+        private static string ToSnakeCase(string input)
+        {
+            return string.Concat(
+                input.Select((c, i) =>
+                    i > 0 && char.IsUpper(c) ? "_" + char.ToLower(c) : char.ToLower(c).ToString()
+                )
+            );
         }
     }
 }

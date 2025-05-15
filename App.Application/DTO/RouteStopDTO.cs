@@ -1,13 +1,11 @@
-﻿using App.Core.Entities;
-
-namespace App.Application.DTO
+﻿namespace App.Application.DTO
 {
     public class RouteStopDTO
     {
         public int Id { get; set; }
         public int BusStopId { get; set; }
         public string? BusStopName { get; set; }
-        public StationType BusStopType { get; set; }
+        public string? BusStopType { get; set; }
         public string? BusStopAddress { get; set; }
         public int StopTimeInMinutes { get; set; } // время стоянки на остановке
         public int MinutesFromStart { get; set; } // время с начала маршрута

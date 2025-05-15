@@ -8,10 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(p => p.UserName)
-                .IsRequired();
-            builder.Property(p => p.HashedPassword)
-                .IsRequired();
+            builder.UseTptMappingStrategy();
         }
     }
 }

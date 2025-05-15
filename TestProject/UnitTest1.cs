@@ -1,7 +1,4 @@
 using App.Application.DTO;
-using App.Application.Mapping;
-using App.DAL.EF;
-using App.DAL.Entities;
 
 namespace TestProject
 {
@@ -23,18 +20,6 @@ namespace TestProject
                 db.Localities.AddRange(user1, user2);
                 db.SaveChanges();
             }
-            Assert.Pass();
-        }
-
-        [Test]
-        public void TestMapping()
-        {
-            Driver driver1 = new Driver() { LicenseId = "123", Name = "Name1", HashedPassword = "123456789" };
-            Driver driver2 = new Driver() { LicenseId = "132", Name = "Name2", HashedPassword = "1234567892424" };
-            var list = new List<Driver> { driver1, driver2 };
-
-            var a = driver1.MapToDto<DriverDTO>();
-            var b = list.MapToDto<Driver, DriverDTO>();
             Assert.Pass();
         }
     }

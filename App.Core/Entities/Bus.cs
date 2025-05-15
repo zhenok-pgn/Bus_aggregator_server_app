@@ -3,10 +3,10 @@
     public class Bus
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? StateNumber { get; set; }
-        public string? Vin { get; set; }
-        public string? Color { get; set; }
-        public string? SeatingPlan { get; set; }
+        public required string Model { get; set; }
+        public required string StateNumber { get; set; }
+        public required string Vin { get; set; }
+        public int CarrierId { get; set; }
+        public Carrier? Carrier { get; set; }
     }
 }
