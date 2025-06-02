@@ -9,5 +9,6 @@ namespace App.Application.Services
         Task TicketRefundResponseAsync(int carrierId, int ticketId, bool isApproved);
         Task TicketRefundRequestAsync(int buyerId, int ticketId);
         Task CheckinAsync(int driverId, CheckinRequest request);
+        Task CheckoutAsync(int driverId, CheckinRequest request);
     }
 }

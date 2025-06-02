@@ -3,12 +3,68 @@
   "WorkspaceRootPath": "D:\\study programming\\visual\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\osrmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\osrmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\routeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\etaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\etaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\routesegmentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\routesegmentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\buslocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\buslocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|d:\\study programming\\visual\\webapplication1\\app.core\\helpers\\etaestimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|solutionrelative:app.core\\helpers\\etaestimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|d:\\study programming\\visual\\webapplication1\\app.application\\dto\\tripetadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|solutionrelative:app.application\\dto\\tripetadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|d:\\study programming\\visual\\webapplication1\\app.application\\services\\ietaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|solutionrelative:app.application\\services\\ietaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|d:\\study programming\\visual\\webapplication1\\app.core\\helpers\\gpsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|solutionrelative:app.core\\helpers\\gpsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\tripnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\tripnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|d:\\study programming\\visual\\webapplication1\\app.application\\services\\itripnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C73C074-0241-45D8-BD4B-D62B69625536}|App.Application\\App.Application.csproj|solutionrelative:app.application\\services\\itripnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\hubs\\triphub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\hubs\\triphub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|d:\\study programming\\visual\\webapplication1\\app.infrastructure\\services\\tripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45DF7679-0744-4EF0-98C2-A28646798444}|App.Infrastructure\\App.Infrastructure.csproj|solutionrelative:app.infrastructure\\services\\tripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|d:\\study programming\\visual\\webapplication1\\webapplication1\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10CCBD01-CE11-48D3-8E0F-F50EF7FC2A9E}|WebApplication1\\App.WEB.csproj|solutionrelative:webapplication1\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|d:\\study programming\\visual\\webapplication1\\app.core\\entities\\buslocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8983A2F8-B944-4564-A1FF-7EA7D7CB0153}|App.Core\\App.Core.csproj|solutionrelative:app.core\\entities\\buslocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +74,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoutesController.cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\RoutesController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\RoutesController.cs",
-              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\RoutesController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\RoutesController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAiwBkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T15:42:53.542Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,10 +84,190 @@
               "RelativeDocumentMoniker": "App.Infrastructure\\Services\\RouteService.cs",
               "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\RouteService.cs",
               "RelativeToolTip": "App.Infrastructure\\Services\\RouteService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACgAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T15:36:30.518Z",
+              "WhenOpened": "2025-06-01T20:29:01.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EtaEstimator.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Helpers\\EtaEstimator.cs",
+              "RelativeDocumentMoniker": "App.Core\\Helpers\\EtaEstimator.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Helpers\\EtaEstimator.cs",
+              "RelativeToolTip": "App.Core\\Helpers\\EtaEstimator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:00:13.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TripEtaDTO.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Application\\DTO\\TripEtaDTO.cs",
+              "RelativeDocumentMoniker": "App.Application\\DTO\\TripEtaDTO.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Application\\DTO\\TripEtaDTO.cs",
+              "RelativeToolTip": "App.Application\\DTO\\TripEtaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:09:07.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OsrmService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\OsrmService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\OsrmService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\OsrmService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\OsrmService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:07:58.315Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EtaService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\EtaService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\EtaService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\EtaService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\EtaService.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAFwAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:33:04.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IEtaService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Application\\Services\\IEtaService.cs",
+              "RelativeDocumentMoniker": "App.Application\\Services\\IEtaService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Application\\Services\\IEtaService.cs",
+              "RelativeToolTip": "App.Application\\Services\\IEtaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:32:30.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RouteSegmentScheduleService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\RouteSegmentScheduleService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\RouteSegmentScheduleService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\RouteSegmentScheduleService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\RouteSegmentScheduleService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:10:05.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ITripNotifier.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Application\\Services\\ITripNotifier.cs",
+              "RelativeDocumentMoniker": "App.Application\\Services\\ITripNotifier.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Application\\Services\\ITripNotifier.cs",
+              "RelativeToolTip": "App.Application\\Services\\ITripNotifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:10:12.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TripNotifier.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\TripNotifier.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\TripNotifier.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\TripNotifier.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\TripNotifier.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:09:57.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TripHub.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Hubs\\TripHub.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Hubs\\TripHub.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Hubs\\TripHub.cs",
+              "RelativeToolTip": "App.Infrastructure\\Hubs\\TripHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T07:03:58.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\OrderService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\OrderService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\OrderService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAG8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T17:07:01.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GpsValidator.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Helpers\\GpsValidator.cs",
+              "RelativeDocumentMoniker": "App.Core\\Helpers\\GpsValidator.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Helpers\\GpsValidator.cs",
+              "RelativeToolTip": "App.Core\\Helpers\\GpsValidator.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAAUAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T09:19:46.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BusLocation.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Entities\\BusLocation.cs",
+              "RelativeDocumentMoniker": "App.Core\\Entities\\BusLocation.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Core\\Entities\\BusLocation.cs",
+              "RelativeToolTip": "App.Core\\Entities\\BusLocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T09:08:28.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BusLocationService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\BusLocationService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\BusLocationService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\BusLocationService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\BusLocationService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T09:04:14.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\LocationController.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\LocationController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T20:16:34.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TripService.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\TripService.cs",
+              "RelativeDocumentMoniker": "App.Infrastructure\\Services\\TripService.cs",
+              "ToolTip": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\Services\\TripService.cs",
+              "RelativeToolTip": "App.Infrastructure\\Services\\TripService.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:05:21.416Z"
             }
           ]
         }

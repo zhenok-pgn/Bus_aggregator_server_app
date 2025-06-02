@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.ComponentModel.DataAnnotations;
 
 namespace App.WEB.Middleware
@@ -34,8 +35,13 @@ namespace App.WEB.Middleware
             var (statusCode, message) = exception switch
             {
                 ValidationException => (StatusCodes.Status400BadRequest, exception.Message),
+                InvalidOperationException => (StatusCodes.Status400BadRequest, exception.Message),
+                ArgumentException => (StatusCodes.Status400BadRequest, exception.Message),
+                NotImplementedException => (StatusCodes.Status400BadRequest, exception.Message),
+                DbUpdateException => (StatusCodes.Status400BadRequest, exception.InnerException == null? exception.Message : exception.InnerException.Message),
                 UnauthorizedAccessException => (StatusCodes.Status401Unauthorized, exception.Message),
                 SecurityTokenException => (StatusCodes.Status401Unauthorized, exception.Message),
+                KeyNotFoundException => (StatusCodes.Status404NotFound, exception.Message),
                 _ => (StatusCodes.Status500InternalServerError, "Внутренняя ошибка сервера")
             };
 
@@ -46,7 +52,7 @@ namespace App.WEB.Middleware
             {
                 StatusCode = statusCode,
                 Message = message,
-                Details = statusCode == 500 ? null : exception.Message
+                Details = exception.Message //statusCode == 500 ? null : exception.Message
             });
         }
     }

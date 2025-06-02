@@ -62,6 +62,237 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "App.WEB.Controllers.BusesController",
+    "Method": "GetBuses",
+    "RelativePath": "buses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.BusesController",
+    "Method": "Create",
+    "RelativePath": "buses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "App.Application.DTO.BusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.BusesController",
+    "Method": "GetBus",
+    "RelativePath": "buses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.BusesController",
+    "Method": "Update",
+    "RelativePath": "buses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "App.Application.DTO.BusDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.BusesController",
+    "Method": "Delete",
+    "RelativePath": "buses/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.DriversController",
+    "Method": "GetDrivers",
+    "RelativePath": "drivers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.DriversController",
+    "Method": "Create",
+    "RelativePath": "drivers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "App.Application.DTO.Requests.DriverRegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.DriversController",
+    "Method": "GetDriver",
+    "RelativePath": "drivers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.DriversController",
+    "Method": "Update",
+    "RelativePath": "drivers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "App.Application.DTO.DriverDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.DriversController",
+    "Method": "Delete",
+    "RelativePath": "drivers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.LocalitiesController",
+    "Method": "GetLocalities",
+    "RelativePath": "localities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.LocalitiesController",
+    "Method": "GetLocality",
+    "RelativePath": "localities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.LocationController",
+    "Method": "UpdateLocation",
+    "RelativePath": "location",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "App.Application.DTO.BusLocationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.LocationController",
+    "Method": "GetLatestLocation",
+    "RelativePath": "location/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tripId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.OrdersController",
+    "Method": "GetOrders",
+    "RelativePath": "orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.Controllers.OrdersController",
     "Method": "Create",
     "RelativePath": "orders",
@@ -79,7 +310,7 @@
   },
   {
     "ContainingType": "WebApplication1.Controllers.OrdersController",
-    "Method": "GetOrders",
+    "Method": "GetOrder",
     "RelativePath": "orders/{order}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -87,13 +318,8 @@
     "Parameters": [
       {
         "Name": "order",
-        "Type": "App.Application.DTO.OrderNumber",
-        "IsRequired": false
-      },
-      {
-        "Name": "order",
-        "Type": "",
-        "IsRequired": false
+        "Type": "System.DateTimeOffset",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -194,6 +420,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "App.WEB.Controllers.RoutesController",
+    "Method": "GetRouteSchedules",
+    "RelativePath": "routes/schedules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "App.WEB.Controllers.TicketsController",
     "Method": "GetTickets",
     "RelativePath": "tickets",
@@ -258,22 +494,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "App.WEB.Controllers.TicketsController",
-    "Method": "Checkin",
-    "RelativePath": "tickets/checkin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "App.Application.DTO.Requests.CheckinRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "App.WEB.Controllers.TripsController",
     "Method": "GetTrips",
     "RelativePath": "trips",
@@ -287,18 +507,23 @@
         "IsRequired": false
       },
       {
-        "Name": "segmentId",
+        "Name": "localityFromId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "localityToId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "departureDateFrom",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "departureDateTo",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -318,29 +543,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "RouteScheduleId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "busId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "driverId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "fromPlanning",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "toPlanning",
-        "Type": "System.DateTime",
-        "IsRequired": false
+        "Name": "planRequest",
+        "Type": "App.Application.DTO.Requests.TripPlanRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -382,6 +587,74 @@
       {
         "Name": "id",
         "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.TripsController",
+    "Method": "GetTripSegments",
+    "RelativePath": "trips/{id}/segments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.TripsController",
+    "Method": "ConfirmArrival",
+    "RelativePath": "trips/{tripId}/segments/{segmentId}/confirm-arrival",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tripId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "segmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "timestamp",
+        "Type": "App.Application.DTO.Requests.TimestampDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.WEB.Controllers.TripsController",
+    "Method": "ConfirmDeparture",
+    "RelativePath": "trips/{tripId}/segments/{segmentId}/confirm-departure",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tripId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "segmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "timestamp",
+        "Type": "App.Application.DTO.Requests.TimestampDTO",
         "IsRequired": true
       }
     ],

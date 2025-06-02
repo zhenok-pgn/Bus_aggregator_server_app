@@ -20,22 +20,24 @@ namespace WebApplication1.Controllers
             _tokenService = tokenService;
         }
 
-        [HttpGet("{order?}")]
+        [HttpGet]
         [Authorize(Roles = "Passenger")]
-        public async Task<IActionResult> GetOrders(
-             OrderNumber? order)
+        public async Task<IActionResult> GetOrders()
         {
             var buyerId = _tokenService.GetUserIdFromContext();
-            if (order == null)
-            {
-                var trips = await _orderService.GetOrdersAsync(buyerId);
-                return Ok(trips);
-            }
-            else
-            {
-                var trip = await _orderService.GetOrderAsync(buyerId, order);
-                return Ok(trip);
-            }
+            var trips = await _orderService.GetOrdersAsync(buyerId);
+            return Ok(trips);
+        }
+
+        [HttpGet("{order}")]
+        [Authorize(Roles = "Passenger")]
+        public async Task<IActionResult> GetOrder(
+             DateTimeOffset order)
+        {
+            var buyerId = _tokenService.GetUserIdFromContext();
+            var orderNum = new OrderNumber { UserId = buyerId, CreatedAt = order };
+            var trip = await _orderService.GetOrderAsync(orderNum);
+            return Ok(trip);
         }
 
         [HttpPost("pay")]

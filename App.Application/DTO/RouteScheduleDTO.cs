@@ -1,17 +1,12 @@
-﻿namespace App.Application.DTO
+﻿using App.Core.Entities;
+
+namespace App.Application.DTO
 {
     public class RouteScheduleDTO
     {
-        public int Id { get; set; }
-        public required TariffDTO Tariff { get; set; }
-        public DateOnly StartDate { get; set; }
-        public DateOnly EndDate { get; set; }
-        public string? Periodicity { get; set; }
-        public string? DaysOfWeek { get; set; } // if Periodicity is 'ByDaysOfTheWeek'
-        public DateOnly? StartWith { get; set; } // if Periodicity is 'ByNumbers'
-        public int? Interval { get; set; } // if Periodicity is 'ByNumbers'
-        public string? DepartureTimes { get; set; }
-        public string? SeatingType { get; set; }
-        public required string BaseSeatingPlan { get; set; }
+        public required string Id { get; set; }
+        public required SchedulePatternDTO SchedulePattern { get; set; }
+        public TimeOnly DepartureTime { get; set; }
+        public required List<RouteSegmentScheduleDTO> RouteSegmentSchedules { get; set; }
     }
 }

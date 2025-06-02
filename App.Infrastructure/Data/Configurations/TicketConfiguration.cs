@@ -8,7 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Ticket> builder)
         {
-            builder.HasAlternateKey(t => new { t.Series, t.Number });
+            //builder.HasAlternateKey(t => new { t.Series, t.Number });
             builder.ToTable(t =>
                 t.HasCheckConstraint("CK_Ticket_Price_Positive", @"""Price"" >= 0"));
         }

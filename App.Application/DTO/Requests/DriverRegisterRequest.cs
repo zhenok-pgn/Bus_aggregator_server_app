@@ -7,6 +7,7 @@
         public required string Patronymic { get; set; }
         public required string LicenseNumber { get; set; }
         public required string EmployeeNumber { get; set; }
-        public required string DayOfBirth { get; set; }
+        public DateOnly DayOfBirth { get; set; }
+        public int CarrierId { get; set; }
     }
 }

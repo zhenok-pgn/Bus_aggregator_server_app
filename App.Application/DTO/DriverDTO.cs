@@ -2,9 +2,14 @@
 {
     public class DriverDTO
     {
-        public int Id { get; set; }
-        public required string LicenseId { get; set; }
+        public required string Id { get; set; }
+        public required string Surname { get; set; }
         public required string Name { get; set; }
-        public required string Password { get; set; }
+        public required string Patronymic { get; set; }
+        public required string LicenseNumber { get; set; }
+        public required string EmployeeNumber { get; set; }
+        public DateOnly DayOfBirth { get; set; }
+        public int CarrierId { get; set; }
+        public required string UserName { get; set; }
     }
 }

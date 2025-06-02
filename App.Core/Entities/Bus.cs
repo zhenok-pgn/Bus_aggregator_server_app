@@ -8,5 +8,6 @@
         public required string Vin { get; set; }
         public int CarrierId { get; set; }
         public Carrier? Carrier { get; set; }
+        public List<Seat> Seats { get; set; } = new();
     }
 }

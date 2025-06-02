@@ -8,8 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Locality> builder)
         {
-            builder.HasAlternateKey(l => l.Okato);
-            builder.Property(l => l.Okato).HasMaxLength(11);
+            builder.HasKey(l => l.OsmId);
             builder.Property(l => l.Name).HasMaxLength(100);
         }
     }

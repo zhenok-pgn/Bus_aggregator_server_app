@@ -266,6 +266,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\App.Infrastructure.csproj": {
+                "projectPath": "D:\\study programming\\visual\\WebApplication1\\App.Infrastructure\\App.Infrastructure.csproj"
+              },
               "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\App.WEB.csproj": {
                 "projectPath": "D:\\study programming\\visual\\WebApplication1\\WebApplication1\\App.WEB.csproj"
               }

@@ -6,8 +6,10 @@ using App.Core.Entities;
 using App.Core.Enums;
 using App.Core.Interfaces;
 using App.Infrastructure.Data;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Data;
 
 namespace App.Infrastructure.Identity
@@ -17,12 +19,14 @@ namespace App.Infrastructure.Identity
         private readonly ApplicationDBContext _db;
         private readonly ITokenService _tokenService;
         private readonly IPasswordHasher _hasher;
+        private readonly IMapper _mapper;
 
-        public AuthService(ApplicationDBContext db, ITokenService tokenGen, IPasswordHasher hasher)
+        public AuthService(ApplicationDBContext db, ITokenService tokenGen, IPasswordHasher hasher, IMapper mapper)
         {
             _db = db;
             _tokenService = tokenGen;
             _hasher = hasher;
+            _mapper = mapper;
         }
 
         public async Task<AuthResponse> LoginAsync(LoginRequest dto)
@@ -92,89 +96,30 @@ namespace App.Infrastructure.Identity
             };
         }
 
-        /*public async Task<AuthResponse> RegisterCarrierAsync(CarrierRegisterRequest dto)
+        public async Task<bool> RegisterCarrierAsync(CarrierRegisterRequest dto)
         {
-            var userInDb = _db.Users.FirstOrDefaultAsync(p => p.UserName == dto.Username);
+            var userInDb = await _db.Users.FirstOrDefaultAsync(p => p.UserName == dto.Username);
             if (userInDb != null)
                 throw new UnauthorizedAccessException("User already exists");
-
-            var user = new User
+            
+            var carrier = new Carrier
             {
+                Name = dto.Name,
+                Inn = dto.Inn,
+                Ogrn = dto.Ogrn,
+                Address = dto.Address,
+                Phone = dto.Phone,
+                Email = dto.Email,
                 UserName = dto.Username,
                 HashedPassword = _hasher.Hash(dto.Password),
-                Role = UserRole.Carrier
+                Role = UserRole.Carrier,
+
             };
 
             using var transaction = await _db.Database.BeginTransactionAsync();
-
             try
             {
-                _db.Users.Add(user);
-                await _db.SaveChangesAsync();
-                _db.Carriers.Add(new Carrier
-                {
-                    Name = dto.Name,
-                    Inn = dto.Inn,
-                    Ogrn = dto.Ogrn,
-                    Address = dto.Address,
-                    Phone = dto.Phone,
-                    Email = dto.Email,
-                    Id = user.Id,
-                    
-                });
-                await _db.SaveChangesAsync();
-                await transaction.CommitAsync();
-            }
-            catch (Exception)
-            {
-                await transaction.RollbackAsync();
-                throw;
-            }
-
-            var accessToken = _tokenService.GenerateAccessToken(user);
-            var refreshToken = _tokenService.GenerateRefreshToken(user.Id);
-
-            await _db.RefreshTokens.AddAsync(refreshToken);
-            await _db.SaveChangesAsync();
-
-            return new()
-            {
-                AccessToken = accessToken,
-                RefreshToken = refreshToken.Token,
-                RefreshTokenExpiresAt = refreshToken.Expires
-            };
-        }*/
-
-        /*public async Task<AuthResponse> RegisterDriverAsync(DriverRegisterRequest dto)
-        {
-            var userInDb = _db.Users.FirstOrDefaultAsync(p => p.UserName == dto.Username);
-            if (userInDb != null)
-                throw new UnauthorizedAccessException("User already exists");
-
-            var user = new User
-            {
-                UserName = dto.Username,
-                HashedPassword = _hasher.Hash(dto.Password),
-                Role = UserRole.Driver
-            };
-
-            using var transaction = await _db.Database.BeginTransactionAsync();
-
-            try
-            {
-                _db.Users.Add(user);
-                await _db.SaveChangesAsync();
-
-                _db.Drivers.Add(new Driver
-                {
-                    Surname = dto.Surname,
-                    Name = dto.Name,
-                    Patronymic = dto.Patronymic,
-                    LicenseNumber = dto.LicenseNumber,
-                    EmployeeNumber = dto.EmployeeNumber,
-                    DayOfBirth = dto.DayOfBirth,
-                    UserId = user.Id
-                });
+                _db.Carriers.Add(carrier);
 
                 await _db.SaveChangesAsync();
                 await transaction.CommitAsync();
@@ -185,19 +130,49 @@ namespace App.Infrastructure.Identity
                 throw;
             }
 
-            var accessToken = _tokenService.GenerateAccessToken(user);
-            var refreshToken = _tokenService.GenerateRefreshToken(user.Id);
+            return true;
+        }
 
-            await _db.RefreshTokens.AddAsync(refreshToken);
-            await _db.SaveChangesAsync();
+        public async Task<bool> RegisterDriverAsync(DriverRegisterRequest dto)
+        {
+            var userInDb = await _db.Users.FirstOrDefaultAsync(p => p.UserName == dto.Username);
+            if (userInDb != null)
+                throw new UnauthorizedAccessException("User already exists");
 
-            return new()
+            /*var driver = new Driver
             {
-                AccessToken = accessToken,
-                RefreshToken = refreshToken.Token,
-                RefreshTokenExpiresAt = refreshToken.Expires
-            };
-        }*/
+                UserName = dto.Username,
+                HashedPassword = _hasher.Hash(dto.Password),
+                Role = UserRole.Driver,
+                Surname = dto.Surname,
+                Name = dto.Name,
+                Patronymic = dto.Patronymic,
+                LicenseNumber = dto.LicenseNumber,
+                EmployeeNumber = dto.EmployeeNumber,
+                DayOfBirth = dto.DayOfBirth,
+                CarrierId = dto.CarrierId,
+            };*/
+            
+            var driver = _mapper.Map<Driver>(dto);
+            driver.HashedPassword = _hasher.Hash(dto.Password);
+
+            using var transaction = await _db.Database.BeginTransactionAsync();
+
+            try
+            {
+                _db.Drivers.Add(driver);
+
+                await _db.SaveChangesAsync();
+                await transaction.CommitAsync();
+            }
+            catch (Exception)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+
+            return true;
+        }
 
         public async Task<AuthResponse> RegisterPassengerAsync(PassengerRegisterRequest dto)
         {

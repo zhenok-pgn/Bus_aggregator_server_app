@@ -56,13 +56,13 @@ namespace App.WEB.Controllers
             return Ok(new { Message = "Successful refund request" });
         }
 
-        [HttpPost("checkin")]
+        /*[HttpPost("checkin")]
         [Authorize(Roles = "Driver")]
         public async Task<IActionResult> Checkin([FromBody] CheckinRequest request)
         {
             var driverId = _tokenService.GetUserIdFromContext();
             await _ticketService.CheckinAsync(driverId, request);
             return Ok(new { Message = "Successful create" });
-        }
+        }*/
     }
 }

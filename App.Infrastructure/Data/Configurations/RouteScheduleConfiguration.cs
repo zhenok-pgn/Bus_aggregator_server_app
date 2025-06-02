@@ -8,7 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<RouteSchedule> builder)
         {
-            builder.HasIndex(rs => new { rs.RouteId, rs.SchedulePatternId, rs.DepartureTime, rs.TariffId })
+            builder.HasIndex(rs => new { rs.RouteId, rs.SchedulePatternId, rs.DepartureTime })
             .IsUnique();
         }
     }

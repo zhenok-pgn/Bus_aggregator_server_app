@@ -10,7 +10,7 @@ namespace App.Application.Services
         Task<AuthResponse> RefreshAsync(string accessToken, string refreshToken);
         Task<UserDTO> GetMe();
         Task<AuthResponse> RegisterPassengerAsync(PassengerRegisterRequest dto);
-        //Task<AuthResponse> RegisterCarrierAsync(CarrierRegisterRequest dto);
-        //Task<AuthResponse> RegisterDriverAsync(DriverRegisterRequest dto);
+        Task<bool> RegisterCarrierAsync(CarrierRegisterRequest dto);
+        Task<bool> RegisterDriverAsync(DriverRegisterRequest dto);
     }
 }

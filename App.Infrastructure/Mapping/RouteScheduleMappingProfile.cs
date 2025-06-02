@@ -10,6 +10,11 @@ namespace App.Infrastructure.Mapping
         {
             CreateMap<RouteSchedule, RouteScheduleDTO>();
             CreateMap<RouteScheduleDTO, RouteSchedule>();
+
+            CreateMap<RouteSchedule, RouteScheduleSummaryDTO>()
+                .ForMember(dist=>dist.StartDate, opt=>opt.MapFrom(src=>src.SchedulePattern.StartDate))
+                .ForMember(dist => dist.EndDate, opt => opt.MapFrom(src => src.SchedulePattern.EndDate))
+                .ForMember(dist => dist.DaysOfWeek, opt => opt.MapFrom(src => src.SchedulePattern.DaysOfWeek));
         }
     }
 }

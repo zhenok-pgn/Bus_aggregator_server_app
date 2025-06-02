@@ -8,8 +8,7 @@ namespace App.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<UtcTimezone> builder)
         {
-            builder.HasIndex(x => x.Name)
-            .IsUnique();
+            builder.HasKey(e => e.Name);
             builder.ToTable(t => {
                 t.HasCheckConstraint("CK_UtcTimezone_Offset", @"""OffsetMinutes"" BETWEEN -840 AND 840");
             });

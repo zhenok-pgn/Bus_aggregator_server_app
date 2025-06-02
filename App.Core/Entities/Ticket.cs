@@ -3,8 +3,6 @@
     public class Ticket
     {
         public int Id { get; set; }
-        public required string Series { get; set; }
-        public required string Number { get; set; }
         public int PassengerId { get; set; }
         public Passenger? Passenger { get; set; }
         public int BookingId { get; set; }

@@ -4,6 +4,7 @@ using App.Infrastructure.Data;
 using App.Infrastructure.Identity;
 using App.Infrastructure.Security;
 using App.Infrastructure.Services;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +47,25 @@ namespace App.Infrastructure.Registration
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"])),
                         ValidateIssuerSigningKey = true
                     };
+
+                    // Подключение SignalR по JWT
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+
+                            // если запрос к /hubs/trip
+                            var path = context.HttpContext.Request.Path;
+                            if (!string.IsNullOrEmpty(accessToken) &&
+                                path.StartsWithSegments("/hubs/trip"))
+                            {
+                                context.Token = accessToken;
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                 })
                 .AddCookie("Cookies", options => // Добавляем схему аутентификации через куки
                 {
@@ -65,13 +85,22 @@ namespace App.Infrastructure.Registration
 
             services.AddScoped<IRouteScheduleService, RouteScheduleService>();
             services.AddScoped<IRouteService, RouteService>();
-            services.AddScoped<ITariffService, TariffService>();
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ITripService, TripService>();
+            services.AddScoped<ITransportationService, TransportationService>();
+            services.AddScoped<ILocalityService, LocalityService>();
+            services.AddScoped<IRouteSegmentScheduleService, RouteSegmentScheduleService>();
+            services.AddScoped<IBusLocationService, BusLocationService>();
+            services.AddScoped<ITripNotifier, TripNotifier>();
 
             // Auto Mapper Configurations
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            services.AddHttpClient("OsrmClient", client =>
+            {
+                client.BaseAddress = new Uri("http://router.project-osrm.org/"); // или свой OSRM-сервер
+            });
 
             return services;
         }

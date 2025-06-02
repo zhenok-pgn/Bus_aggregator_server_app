@@ -17,7 +17,6 @@ namespace App.Infrastructure.Data
         public DbSet<RouteSchedule> RouteSchedules { get; set; } = null!;
         public DbSet<RouteSegmentSchedule> RouteSegmentSchedules { get; set; } = null!;
         public DbSet<BusStop> BusStops { get; set; } = null!;
-        public DbSet<Tariff> Tariffs { get; set; } = null!;
         public DbSet<Trip> Trips { get; set; } = null!;
         public DbSet<Passenger> Passengers { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
@@ -32,7 +31,6 @@ namespace App.Infrastructure.Data
 
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
-            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -77,7 +75,6 @@ namespace App.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new TripConfiguration());
             modelBuilder.ApplyConfiguration(new BusStopConfiguration());
             modelBuilder.ApplyConfiguration(new LocalityConfiguration());
-            modelBuilder.ApplyConfiguration(new TariffConfiguration());
             modelBuilder.ApplyConfiguration(new RouteScheduleConfiguration());
             modelBuilder.ApplyConfiguration(new BusConfiguration());
             modelBuilder.ApplyConfiguration(new DriverConfiguration());
@@ -95,45 +92,6 @@ namespace App.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new BusLocationConfiguration());
             modelBuilder.ApplyConfiguration(new BookingConfiguration());
             modelBuilder.ApplyConfiguration(new BookingStatusHistoryConfiguration());
-
-            //ApplySnakeCaseNames(modelBuilder);
-        }
-
-        private static void ApplySnakeCaseNames(ModelBuilder modelBuilder)
-        {
-            foreach (var entity in modelBuilder.Model.GetEntityTypes())
-            {
-                entity.SetTableName(ToSnakeCase(entity.GetTableName()!));
-
-                foreach (var property in entity.GetProperties())
-                {
-                    property.SetColumnName(ToSnakeCase(property.GetColumnName()!));
-                }
-
-                foreach (var key in entity.GetKeys())
-                {
-                    key.SetName(ToSnakeCase(key.GetName()!));
-                }
-
-                foreach (var fk in entity.GetForeignKeys())
-                {
-                    fk.SetConstraintName(ToSnakeCase(fk.GetConstraintName()!));
-                }
-
-                foreach (var index in entity.GetIndexes())
-                {
-                    index.SetDatabaseName(ToSnakeCase(index.GetDatabaseName()!));
-                }
-            }
-        }
-
-        private static string ToSnakeCase(string input)
-        {
-            return string.Concat(
-                input.Select((c, i) =>
-                    i > 0 && char.IsUpper(c) ? "_" + char.ToLower(c) : char.ToLower(c).ToString()
-                )
-            );
         }
     }
 }

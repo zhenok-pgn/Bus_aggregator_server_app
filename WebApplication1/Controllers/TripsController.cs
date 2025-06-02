@@ -2,6 +2,8 @@
 using App.Application.DTO;
 using Microsoft.AspNetCore.Authorization;
 using App.Application.Services;
+using App.Application.DTO.Requests;
+using App.Core.Entities;
 
 namespace App.WEB.Controllers
 { 
@@ -9,8 +11,8 @@ namespace App.WEB.Controllers
     [Route("trips")]
     public class TripsController : ControllerBase
     {
-        private ITripService _tripService { get; set; }
-        private ITokenService _tokenService { get; set; }
+        private readonly ITripService _tripService;
+        private readonly ITokenService _tokenService;
 
         public TripsController(ITripService tripService, ITokenService tokenService)
         {
@@ -21,12 +23,13 @@ namespace App.WEB.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTrips(
             [FromQuery] int? carrierId,
-            [FromQuery] int? segmentId,
-            [FromQuery] DateTime? departureDateFrom,
-            [FromQuery] DateTime? departureDateTo,
+            [FromQuery] int? localityFromId,
+            [FromQuery] int? localityToId,
+            [FromQuery] DateOnly? departureDateFrom,
+            [FromQuery] DateOnly? departureDateTo,
             [FromQuery] List<int> routes)
         {
-            var trips = await _tripService.GetTripsAsync(carrierId, segmentId, departureDateFrom, departureDateTo, routes);
+            var trips = await _tripService.GetTripsAsync(carrierId, localityFromId, localityToId, departureDateFrom, departureDateTo, routes);
             return Ok(trips);
         }
 
@@ -39,17 +42,10 @@ namespace App.WEB.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Carrier")]
-        public async Task<IActionResult> Create(
-            [FromQuery] int RouteScheduleId,
-            [FromQuery] int busId,
-            [FromQuery] int driverId,
-            [FromQuery] DateTime fromPlanning,
-            [FromQuery] DateTime toPlanning
-
-            )
+        public async Task<IActionResult> Create([FromBody] TripPlanRequest planRequest)
         {
             var carrierId = _tokenService.GetUserIdFromContext();
-            await _tripService.CreateAsync(RouteScheduleId, fromPlanning, toPlanning, carrierId, busId, driverId);
+            await _tripService.CreateAsync(planRequest, carrierId);
             return Ok(new { Message = "Successful create" });
         }
 
@@ -58,7 +54,7 @@ namespace App.WEB.Controllers
         public async Task<IActionResult> Update([FromBody] TripDTO dto)
         {
             var carrierId = _tokenService.GetUserIdFromContext();
-            if (carrierId != dto.Carrier.Id)
+            if (carrierId != dto.Route.CarrierId)
                 throw new UnauthorizedAccessException("You do not have permission to update a trip for this carrier.");
 
             await _tripService.UpdateAsync(dto);
@@ -72,6 +68,31 @@ namespace App.WEB.Controllers
             var driverId = _tokenService.GetUserIdFromContext();
             var trips = await _tripService.GetDriversTripsAsync(driverId);
             return Ok(trips);
+        }
+
+        [HttpGet("{id}/segments")]
+        public async Task<IActionResult> GetTripSegments(int id)
+        {
+            var execution = await _tripService.GetTripExecutionAsync(id);
+            return Ok(execution);
+        }
+
+        [Authorize(Roles = "Driver")]
+        [HttpPost("{tripId}/segments/{segmentId}/confirm-arrival")]
+        public async Task<IActionResult> ConfirmArrival(int tripId, int segmentId, [FromBody] TimestampDTO timestamp)
+        {
+            var driverId = _tokenService.GetUserIdFromContext();
+            await _tripService.ConfirmArrivalAsync(driverId, tripId, segmentId, timestamp.Timestamp);
+            return Ok(new { Message = "arrival confirmed" });
+        }
+
+        [Authorize(Roles = "Driver")]
+        [HttpPost("{tripId}/segments/{segmentId}/confirm-departure")]
+        public async Task<IActionResult> ConfirmDeparture(int tripId, int segmentId, [FromBody] TimestampDTO timestamp)
+        {
+            var driverId = _tokenService.GetUserIdFromContext();
+            await _tripService.ConfirmDepartureAsync(driverId, tripId, segmentId, timestamp.Timestamp);
+            return Ok(new { Message = "departure confirmed" });
         }
     }
 }

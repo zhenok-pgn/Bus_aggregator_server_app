@@ -16,7 +16,6 @@ namespace App.Infrastructure.Data.Configurations
             builder.ToTable(t => {
                 t.HasCheckConstraint("CK_Carrier_Inn_Format", @"""Inn"" ~ '^[0-9]{10}$'");
                 t.HasCheckConstraint("CK_Carrier_Ogrn_Format", @"""Ogrn"" ~ '^[0-9]{13}$'");
-                t.HasCheckConstraint("CK_Carrier_Email_Format", @"""Email"" ~* '^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$'");
             });
         }
     }

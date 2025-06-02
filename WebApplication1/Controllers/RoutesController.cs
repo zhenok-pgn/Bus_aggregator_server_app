@@ -27,6 +27,15 @@ namespace App.WEB.Controllers
             return Ok(routes);
         }
 
+        [HttpGet("schedules")]
+        [Authorize(Roles = "Carrier")]
+        public async Task<IActionResult> GetRouteSchedules()
+        {
+            var carrierId = _tokenService.GetUserIdFromContext();
+            var schedules = await _routeService.GetRouteSchedulesAsync(carrierId);
+            return Ok(schedules);
+        }
+
         [HttpGet("{id}")]
         [Authorize(Roles = "Carrier")]
         public async Task<IActionResult> GetRoute(int id)
@@ -41,7 +50,7 @@ namespace App.WEB.Controllers
         public async Task<IActionResult> Create([FromBody] RouteDTO dto)
         {
             var carrierId = _tokenService.GetUserIdFromContext();
-            if(carrierId != dto.Carrier.Id)
+            if(carrierId != dto.CarrierId)
                 throw new UnauthorizedAccessException("You do not have permission to create a route for this carrier.");
 
             await _routeService.CreateAsync(dto);
@@ -53,7 +62,7 @@ namespace App.WEB.Controllers
         public async Task<IActionResult> Update([FromBody] RouteDTO dto)
         {
             var carrierId = _tokenService.GetUserIdFromContext();
-            if (carrierId != dto.Carrier.Id)
+            if (carrierId != dto.CarrierId)
                 throw new UnauthorizedAccessException("You do not have permission to update a route for this carrier.");
 
             await _routeService.UpdateAsync(dto);

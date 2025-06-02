@@ -2,10 +2,12 @@
 {
     public class Locality
     {
-        public int Id { get; set; }
+        public int OsmId { get; set; }
         public required string Name { get; set; }
-        public required string Okato { get; set; }
-        public int UtcTimezoneId { get; set; }
+        public required string Region { get; set; }
+        public required string Country { get; set; }
+        public required string District { get; set; }
+        public required string UtcTimezoneName { get; set; }
         public UtcTimezone? UtcTimezone { get; set; }
     }
 }
