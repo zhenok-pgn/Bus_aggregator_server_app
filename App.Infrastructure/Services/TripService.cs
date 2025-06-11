@@ -18,13 +18,15 @@ namespace App.Infrastructure.Services
         private readonly IMapper _mapper;
         private readonly IRouteSegmentScheduleService _routeSegmentScheduleService;
         private readonly ITicketService _ticketService;
+        private readonly ITripNotifier _tripNotifier;
 
-        public TripService(ApplicationDBContext db, IMapper mapper, IRouteSegmentScheduleService routeSegmentScheduleService, ITicketService ticketService)
+        public TripService(ApplicationDBContext db, IMapper mapper, IRouteSegmentScheduleService routeSegmentScheduleService, ITicketService ticketService, ITripNotifier tripNotifier)
         {
             _db = db;
             _mapper = mapper;
             _routeSegmentScheduleService = routeSegmentScheduleService;
             _ticketService = ticketService;
+            _tripNotifier = tripNotifier;
         }
         public async Task<List<TripDTO>> GetTripsAsync(int? carrierId, int? localityFromId, int? localityToId, DateOnly? departureDateFrom, DateOnly? departureDateTo, List<int> routeIds)
         {
@@ -456,7 +458,10 @@ namespace App.Infrastructure.Services
             await using var transaction = await _db.Database.BeginTransactionAsync();
             try {
                 if (routeScheduleIndex == 0)
+                {
                     trip!.TripStatus = TripStatus.InProgress;
+                    await _tripNotifier.SendTripStatusUpdateAsync(tripId, TripStatus.InProgress.ToString());
+                }
                 foreach (var rs in relatedSegments)
                 {
                     var segParts = rs.SegmentNumber.Split('-');

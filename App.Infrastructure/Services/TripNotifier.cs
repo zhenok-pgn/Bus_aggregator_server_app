@@ -1,5 +1,6 @@
 ﻿using App.Application.DTO;
 using App.Application.Services;
+using App.Core.Entities;
 using App.Infrastructure.Data;
 using App.Infrastructure.Hubs;
 using Microsoft.AspNetCore.SignalR;
@@ -26,7 +27,7 @@ namespace App.Infrastructure.Services
                 .FirstOrDefaultAsync();
             var routeSegmentIds = await _db.RouteSegmentSchedules
                 .Where(rss => rss.RouteScheduleId == routeScheduleId)
-                .Select(rss => rss.RouteSegmentId.ToString())
+                .Select(rss => rss.Id.ToString())
                 .ToListAsync();
             foreach(var i in routeSegmentIds)
             {
@@ -35,16 +36,43 @@ namespace App.Infrastructure.Services
             }
         }
 
-        public Task SendStatusUpdateAsync(int routeSegmentId, string status)
+        public async Task SendRouteSegmentStatusUpdateAsync(int routeSegmentId, string status)
         {
-            return _hubContext.Clients.Group(routeSegmentId.ToString())
+            await _hubContext.Clients.Group(routeSegmentId.ToString())
                 .SendAsync("TripStatusChanged", status);
         }
 
-        public Task SendEtaUpdateAsync(int routeSegmentId, TripEtaDTO eta)
+        public async Task SendTripStatusUpdateAsync(int tripId, string status)
         {
-            return _hubContext.Clients.Group(routeSegmentId.ToString())
+            var routeScheduleId = await _db.Trips
+                .Where(t => t.Id == tripId)
+                .Select(t => t.RouteScheduleId)
+                .FirstOrDefaultAsync();
+            var routeSegmentIds = await _db.RouteSegmentSchedules
+                .Where(rss => rss.RouteScheduleId == routeScheduleId)
+                .Select(rss => rss.Id)
+                .ToListAsync();
+            foreach (var i in routeSegmentIds)
+            {
+                await SendRouteSegmentStatusUpdateAsync(i, status);
+            }
+        }
+
+        public async Task SendEtaUpdateAsync(int tripId, TripEtaDTO eta)
+        {
+            var routeScheduleId = await _db.Trips
+                .Where(t => t.Id == tripId)
+                .Select(t => t.RouteScheduleId)
+                .FirstOrDefaultAsync();
+            var routeSegmentIds = await _db.RouteSegmentSchedules
+                .Where(rss => rss.RouteScheduleId == routeScheduleId)
+                .Select(rss => rss.Id.ToString())
+                .ToListAsync();
+            foreach (var i in routeSegmentIds)
+            {
+                await _hubContext.Clients.Group(i)
                 .SendAsync("EtaUpdated", eta);
+            }
         }
     }
 }

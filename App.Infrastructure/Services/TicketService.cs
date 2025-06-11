@@ -11,16 +11,22 @@ namespace App.Infrastructure.Services
 {
     public class TicketService : ITicketService
     {
-        public readonly ApplicationDBContext _db;
-        public TicketService(ApplicationDBContext db)
+        private readonly ApplicationDBContext _db;
+        private readonly ITripNotifier _tripNotifier;
+
+        public TicketService(ApplicationDBContext db, ITripNotifier tripNotifier)
         {
             _db = db;
+            _tripNotifier = tripNotifier;
         }
 
         public async Task CheckinAsync(int driverId, CheckinRequest request)
         {
+            var segmentNumber = await _db.RouteSegmentSchedules.Where(rss => rss.Id == request.SegmentId).Select(rss => rss.SegmentNumber).FirstOrDefaultAsync()
+                ?? throw new KeyNotFoundException("Сегмент маршрута не найден при посадке на рейс");
+            var segmentParts = segmentNumber.Split('-');
             var bookings = await _db.Bookings
-                .Where(b => b.TripId == request.TripId && b.RouteSegmentScheduleId == request.SegmentId)
+                .Where(b => b.TripId == request.TripId && b.RouteSegmentSchedule.SegmentNumber.StartsWith(segmentParts[0] + '-'))
                 .Include(b => b.BookingStatusHistories)
                 .Where(b => b.BookingStatusHistories
                             .OrderByDescending(h => h.StatusChangedAt)
@@ -37,14 +43,19 @@ namespace App.Infrastructure.Services
                     Status = BookingStatus.Confirmed,
                     StatusChangedAt = DateTimeOffset.UtcNow,
                 });
+                // Уведомляем о посадке на рейс
+                await _tripNotifier.SendRouteSegmentStatusUpdateAsync(bookings[i].RouteSegmentScheduleId, BookingStatus.Confirmed.ToString());
             }
             await _db.SaveChangesAsync();
         }
 
         public async Task CheckoutAsync(int driverId, CheckinRequest request)
         {
+            var segmentNumber = await _db.RouteSegmentSchedules.Where(rss => rss.Id == request.SegmentId).Select(rss => rss.SegmentNumber).FirstOrDefaultAsync()
+                ?? throw new KeyNotFoundException("Сегмент маршрута не найден при высадке");
+            var segmentParts = segmentNumber.Split('-');
             var bookings = await _db.Bookings
-                .Where(b => b.TripId == request.TripId && b.RouteSegmentScheduleId == request.SegmentId)
+                .Where(b => b.TripId == request.TripId && b.RouteSegmentSchedule.SegmentNumber.EndsWith('-' + segmentParts[1]))
                 .Include(b => b.BookingStatusHistories)
                 .Where(b => b.BookingStatusHistories
                             .OrderByDescending(h => h.StatusChangedAt)
@@ -61,6 +72,8 @@ namespace App.Infrastructure.Services
                     Status = BookingStatus.Completed,
                     StatusChangedAt = DateTimeOffset.UtcNow,
                 });
+                // Уведомляем о высадке с рейса
+                await _tripNotifier.SendRouteSegmentStatusUpdateAsync(bookings[i].RouteSegmentScheduleId, BookingStatus.Completed.ToString());
             }
             await _db.SaveChangesAsync();
         }

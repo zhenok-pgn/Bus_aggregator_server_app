@@ -73,7 +73,7 @@ namespace App.Infrastructure.Services
 
             var ordered = segments
                 .OrderBy(rss => int.Parse(rss.SegmentNumber.Split('-')[1]))
-                .Select(rss => rss.Id)
+                .Select(rss => rss.RouteSegmentId)
                 .ToList();
 
             return ordered;

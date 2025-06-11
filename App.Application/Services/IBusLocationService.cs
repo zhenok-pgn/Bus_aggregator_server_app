@@ -4,8 +4,8 @@ namespace App.Application.Services
 {
     public interface IBusLocationService
     {
-        Task<BusLocationDTO> GetLatestBusLocationAsync(int tripId);
+        Task<BusLocationDTO?> GetLatestBusLocationAsync(int tripId);
         Task UpdateBusLocationAsync(int driverId, BusLocationDTO dto);
-        Task<double> GetBusAverageSpeedAsync(int tripId);
+        Task<double?> GetBusAverageSpeedAsync(int tripId);
     }
 }

@@ -83,6 +83,7 @@ namespace App.Infrastructure.Registration
 
             services.AddScoped<IAuthService, AuthService>();
 
+            services.AddMemoryCache();
             services.AddScoped<IRouteScheduleService, RouteScheduleService>();
             services.AddScoped<IRouteService, RouteService>();
             services.AddScoped<ITicketService, TicketService>();
@@ -93,6 +94,9 @@ namespace App.Infrastructure.Registration
             services.AddScoped<IRouteSegmentScheduleService, RouteSegmentScheduleService>();
             services.AddScoped<IBusLocationService, BusLocationService>();
             services.AddScoped<ITripNotifier, TripNotifier>();
+            services.AddScoped<IEtaService, EtaService>();
+            services.AddScoped<OsrmService>();
+            services.AddSingleton<IEtaCache, InMemoryEtaCache>();
 
             // Auto Mapper Configurations
             services.AddAutoMapper(Assembly.GetExecutingAssembly());

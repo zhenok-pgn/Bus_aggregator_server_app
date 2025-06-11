@@ -4,6 +4,6 @@ namespace App.Application.Services
 {
     public interface IEtaService
     {
-        Task<TripEtaDTO> CalculateEtaAsync(int tripId);
+        Task<TripEtaDTO?> CalculateEtaAsync(int tripId);
     }
 }

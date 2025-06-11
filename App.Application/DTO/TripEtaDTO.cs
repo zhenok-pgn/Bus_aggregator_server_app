@@ -14,7 +14,7 @@
         public double Latitude { get; set; }                        // Широта остановки
         public double Longitude { get; set; }
         public double TimezoneOffset { get; set; }            // Смещение часового пояса в секундах
-        public DateTimeOffset EstimatedArrival { get; set; }      // Ожидаемое прибытие
+        public DateTimeOffset? EstimatedArrival { get; set; }      // Ожидаемое прибытие
         public TimeSpan? Delay { get; set; }                      // Задержка, если есть
     }
 }

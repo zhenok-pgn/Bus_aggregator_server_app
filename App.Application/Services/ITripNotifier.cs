@@ -5,7 +5,8 @@ namespace App.Application.Services
     public interface ITripNotifier
     {
         Task SendLocationUpdateAsync(int tripId, BusLocationDTO location);
-        Task SendStatusUpdateAsync(int routeSegmentId, string status);
-        Task SendEtaUpdateAsync(int routeSegmentId, TripEtaDTO eta);
+        Task SendRouteSegmentStatusUpdateAsync(int routeSegmentId, string status);
+        Task SendTripStatusUpdateAsync(int tripId, string status);
+        Task SendEtaUpdateAsync(int tripId, TripEtaDTO eta);
     }
 }
